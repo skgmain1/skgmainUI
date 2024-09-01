@@ -62,7 +62,7 @@ local RayfieldLibrary = {
 		},
 		Light = {
 			TextFont = "Default", -- Шрифт текста
-			TextColor = Color3.fromRGB(0, 0, 0), -- Цвет текста (черный)
+			TextColor = Color3.fromRGB(50, 50, 50), -- Цвет текста (черный)
 
 			Background = Color3.fromRGB(255, 255, 255), -- Фон (белый)
 			Topbar = Color3.fromRGB(217, 217, 217), -- Цвет верхней панели (светло-серый)
