@@ -73,7 +73,7 @@ local RayfieldLibrary = {
 
 			TabBackground = Color3.fromRGB(220, 220, 220), -- Фон вкладок (светло-серый)
 			TabStroke = Color3.fromRGB(112, 112, 112), -- Обводка вкладок (тёмно-серый)
-			TabBackgroundSelected = Color3.fromRGB(0, 142, 208), -- Фон выбранной вкладки (светло-голубой)
+			TabBackgroundSelected = Color3.fromRGB(138, 43, 226), -- Фон выбранной вкладки (фиолетовый)
 			TabTextColor = Color3.fromRGB(0, 0, 0), -- Цвет текста вкладок (черный)
 			SelectedTabTextColor = Color3.fromRGB(255, 255, 255), -- Цвет текста выбранной вкладки (белый)
 
@@ -83,21 +83,24 @@ local RayfieldLibrary = {
 			ElementStroke = Color3.fromRGB(216, 191, 216), -- Обводка элементов (светло-фиолетовый)
 			SecondaryElementStroke = Color3.fromRGB(40, 40, 40), -- Обводка второстепенных элементов (тёмно-серый)
 
-			SliderBackground = Color3.fromRGB(144, 0, 255), -- Фон слайдера (фиолетовый)
-			SliderProgress = Color3.fromRGB(144, 0, 255), -- Прогресс слайдера (фиолетовый)
+			SliderBackground = Color3.fromRGB(138, 43, 226), -- Фон слайдера (фиолетовый)
+			SliderProgress = Color3.fromRGB(138, 43, 226), -- Прогресс слайдера (фиолетовый)
 			SliderStroke = Color3.fromRGB(186, 85, 211), -- Обводка слайдера (светло-фиолетовый)
 
 			ToggleBackground = Color3.fromRGB(176, 126, 255), -- Фон переключателя (светло-фиолетовый)
 			ToggleEnabled = Color3.fromRGB(128, 0, 128), -- Включённый переключатель (тёмно-фиолетовый)
 			ToggleDisabled = Color3.fromRGB(100, 100, 100), -- Выключенный переключатель (серый)
 			ToggleEnabledStroke = Color3.fromRGB(186, 85, 211), -- Обводка включённого переключателя (светло-фиолетовый)
-			ToggleDisabledStroke = Color3.fromRGB(125, 125, 125), -- Обводка выключенного переключателя (Серый)
+			ToggleDisabledStroke = Color3.fromRGB(125, 125, 125), -- Обводка выключенного переключателя (серый)
 			ToggleEnabledOuterStroke = Color3.fromRGB(138, 43, 226), -- Внешняя обводка включённого переключателя (фиолетовый)
-			ToggleDisabledOuterStroke = Color3.fromRGB(65, 65, 65), -- Внешняя обводка выключенного переключателя (Серый)
+			ToggleDisabledOuterStroke = Color3.fromRGB(65, 65, 65), -- Внешняя обводка выключенного переключателя (серый)
 
-			InputBackground = Color3.fromRGB(144, 0, 255), -- Фон поля ввода (фиолетовый)
+			InputBackground = Color3.fromRGB(138, 43, 226), -- Фон поля ввода (фиолетовый)
 			InputStroke = Color3.fromRGB(75, 0, 130), -- Обводка поля ввода (тёмно-фиолетовый)
 			PlaceholderColor = Color3.fromRGB(178, 178, 178) -- Цвет плейсхолдера (серый)
+
+
+
 
 		}
 	}
