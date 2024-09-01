@@ -170,36 +170,71 @@ local Notifications = Rayfield.Notifications
 
 local SelectedTheme = RayfieldLibrary.Theme.Default
 
+-- Таблица для хранения предыдущих цветов
+local PreviousColors = {
+    MainBackground = nil,
+    TopbarBackground = nil,
+    TopbarCornerRepair = nil,
+    ShadowImage = nil,
+    -- Добавьте другие необходимые элементы здесь
+}
+
 function ChangeTheme(ThemeName)
-	SelectedTheme = RayfieldLibrary.Theme[ThemeName]
-	for _, obj in ipairs(Rayfield:GetDescendants()) do
-		if obj.ClassName == "TextLabel" or obj.ClassName == "TextBox" or obj.ClassName == "TextButton" then
-			if SelectedTheme.TextFont ~= "Default" then 
-				obj.TextColor3 = SelectedTheme.TextColor
-				obj.Font = SelectedTheme.TextFont
-			end
-		end
-	end
+    local SelectedTheme = RayfieldLibrary.Theme[ThemeName]
 
-	Rayfield.Main.BackgroundColor3 = SelectedTheme.Background
-	Rayfield.Main.Topbar.BackgroundColor3 = SelectedTheme.Topbar
-	Rayfield.Main.Topbar.CornerRepair.BackgroundColor3 = SelectedTheme.Topbar
-	Rayfield.Main.Shadow.Image.ImageColor3 = SelectedTheme.Shadow
+    -- Сохранение текущих цветов
+    PreviousColors.MainBackground = Rayfield.Main.BackgroundColor3
+    PreviousColors.TopbarBackground = Rayfield.Main.Topbar.BackgroundColor3
+    PreviousColors.TopbarCornerRepair = Rayfield.Main.Topbar.CornerRepair.BackgroundColor3
+    PreviousColors.ShadowImage = Rayfield.Main.Shadow.Image.ImageColor3
+    -- Сохраните другие элементы, если необходимо
 
-	Rayfield.Main.Topbar.ChangeSize.ImageColor3 = SelectedTheme.TextColor
-	Rayfield.Main.Topbar.Hide.ImageColor3 = SelectedTheme.TextColor
-	Rayfield.Main.Topbar.Theme.ImageColor3 = SelectedTheme.TextColor
+    for _, obj in ipairs(Rayfield:GetDescendants()) do
+        if obj.ClassName == "TextLabel" or obj.ClassName == "TextBox" or obj.ClassName == "TextButton" then
+            if SelectedTheme.TextFont ~= "Default" then
+                obj.TextColor3 = SelectedTheme.TextColor
+                obj.Font = SelectedTheme.TextFont
+            end
+        end
+    end
 
-	for _, TabPage in ipairs(Elements:GetChildren()) do
-		for _, Element in ipairs(TabPage:GetChildren()) do
-			if Element.ClassName == "Frame" and Element.Name ~= "Placeholder" and Element.Name ~= "SectionSpacing" and Element.Name ~= "SectionTitle"  then
-				Element.BackgroundColor3 = SelectedTheme.ElementBackground
-				Element.UIStroke.Color = SelectedTheme.ElementStroke
-			end
-		end
-	end
+    -- Применение новой темы
+    Rayfield.Main.BackgroundColor3 = SelectedTheme.Background
+    Rayfield.Main.Topbar.BackgroundColor3 = SelectedTheme.Topbar
+    Rayfield.Main.Topbar.CornerRepair.BackgroundColor3 = SelectedTheme.Topbar
+    Rayfield.Main.Shadow.Image.ImageColor3 = SelectedTheme.Shadow
 
+    Rayfield.Main.Topbar.ChangeSize.ImageColor3 = SelectedTheme.TextColor
+    Rayfield.Main.Topbar.Hide.ImageColor3 = SelectedTheme.TextColor
+    Rayfield.Main.Topbar.Theme.ImageColor3 = SelectedTheme.TextColor
+
+    for _, TabPage in ipairs(Elements:GetChildren()) do
+        for _, Element in ipairs(TabPage:GetChildren()) do
+            if Element.ClassName == "Frame" and Element.Name ~= "Placeholder" and Element.Name ~= "SectionSpacing" and Element.Name ~= "SectionTitle" then
+                Element.BackgroundColor3 = SelectedTheme.ElementBackground
+                Element.UIStroke.Color = SelectedTheme.ElementStroke
+            end
+        end
+    end
 end
+
+-- Пример функции для восстановления предыдущих цветов
+function RestorePreviousColors()
+    if PreviousColors.MainBackground then
+        Rayfield.Main.BackgroundColor3 = PreviousColors.MainBackground
+    end
+    if PreviousColors.TopbarBackground then
+        Rayfield.Main.Topbar.BackgroundColor3 = PreviousColors.TopbarBackground
+    end
+    if PreviousColors.TopbarCornerRepair then
+        Rayfield.Main.Topbar.CornerRepair.BackgroundColor3 = PreviousColors.TopbarCornerRepair
+    end
+    if PreviousColors.ShadowImage then
+        Rayfield.Main.Shadow.Image.ImageColor3 = PreviousColors.ShadowImage
+    end
+    -- Восстановите другие элементы, если необходимо
+end
+
 
 local function AddDraggingFunctionality(DragPoint, Main)
 	pcall(function()
