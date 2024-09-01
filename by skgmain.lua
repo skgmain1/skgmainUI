@@ -62,7 +62,7 @@ local RayfieldLibrary = {
 		},
 		Light = {
 			TextFont = "Default", -- Шрифт текста
-			TextColor = Color3.fromRGB(0, 0, 0), -- Цвет текста (тёмно-серый)
+			TextColor = Color3.fromRGB(0, 0, 0), -- Цвет текста (черный)
 
 			Background = Color3.fromRGB(255, 255, 255), -- Фон (белый)
 			Topbar = Color3.fromRGB(217, 217, 217), -- Цвет верхней панели (светло-серый)
@@ -74,17 +74,17 @@ local RayfieldLibrary = {
 			TabBackground = Color3.fromRGB(220, 220, 220), -- Фон вкладок (светло-серый)
 			TabStroke = Color3.fromRGB(112, 112, 112), -- Обводка вкладок (тёмно-серый)
 			TabBackgroundSelected = Color3.fromRGB(0, 142, 208), -- Фон выбранной вкладки (светло-голубой)
-			TabTextColor = Color3.fromRGB(50, 50, 50), -- Цвет текста вкладок (тёмно-серый)
+			TabTextColor = Color3.fromRGB(0, 0, 0), -- Цвет текста вкладок (черный)
 			SelectedTabTextColor = Color3.fromRGB(255, 255, 255), -- Цвет текста выбранной вкладки (белый)
 
 			ElementBackground = Color3.fromRGB(198, 198, 198), -- Фон элементов (светло-серый)
 			ElementBackgroundHover = Color3.fromRGB(230, 230, 230), -- Фон при наведении (очень светло-серый)
 			SecondaryElementBackground = Color3.fromRGB(136, 136, 136), -- Фон для второстепенных элементов (серый)
-			ElementStroke = Color3.fromRGB(180, 199, 97), -- Обводка элементов (светло-оливковый)
+			ElementStroke = Color3.fromRGB(186, 85, 211), -- Обводка элементов (нежный фиолетовый)
 			SecondaryElementStroke = Color3.fromRGB(40, 40, 40), -- Обводка второстепенных элементов (тёмно-серый)
 
-			SliderBackground = Color3.fromRGB(144, 0, 255), -- Фон слайдера (фioletовый)
-			SliderProgress = Color3.fromRGB(144, 0, 255), -- Прогресс слайдера (фioletовый)
+			SliderBackground = Color3.fromRGB(144, 0, 255), -- Фон слайдера (фиолетовый)
+			SliderProgress = Color3.fromRGB(144, 0, 255), -- Прогресс слайдера (фиолетовый)
 			SliderStroke = Color3.fromRGB(186, 85, 211), -- Обводка слайдера (светло-фиолетовый)
 
 			ToggleBackground = Color3.fromRGB(176, 126, 255), -- Фон переключателя (светло-фиолетовый)
@@ -98,6 +98,7 @@ local RayfieldLibrary = {
 			InputBackground = Color3.fromRGB(144, 0, 255), -- Фон поля ввода (фиолетовый)
 			InputStroke = Color3.fromRGB(75, 0, 130), -- Обводка поля ввода (тёмно-фиолетовый)
 			PlaceholderColor = Color3.fromRGB(178, 178, 178) -- Цвет плейсхолдера (серый)
+
 
 		}
 	}
