@@ -80,7 +80,7 @@ local RayfieldLibrary = {
 			ElementBackground = Color3.fromRGB(198, 198, 198), -- Фон элементов (светло-серый)
 			ElementBackgroundHover = Color3.fromRGB(230, 230, 230), -- Фон при наведении (очень светло-серый)
 			SecondaryElementBackground = Color3.fromRGB(136, 136, 136), -- Фон для второстепенных элементов (серый)
-			ElementStroke = Color3.fromRGB(200, 160, 255), -- Обводка элементов (нежный пастельный фиолетовый)
+			ElementStroke = Color3.fromRGB(216, 191, 216), -- Обводка элементов (светло-фиолетовый)
 			SecondaryElementStroke = Color3.fromRGB(40, 40, 40), -- Обводка второстепенных элементов (тёмно-серый)
 
 			SliderBackground = Color3.fromRGB(144, 0, 255), -- Фон слайдера (фиолетовый)
@@ -98,7 +98,6 @@ local RayfieldLibrary = {
 			InputBackground = Color3.fromRGB(144, 0, 255), -- Фон поля ввода (фиолетовый)
 			InputStroke = Color3.fromRGB(75, 0, 130), -- Обводка поля ввода (тёмно-фиолетовый)
 			PlaceholderColor = Color3.fromRGB(178, 178, 178) -- Цвет плейсхолдера (серый)
-
 
 		}
 	}
