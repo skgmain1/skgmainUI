@@ -23,7 +23,7 @@ local RayfieldLibrary = {
 	Theme = {
 		Default = {
             TextFont = "Default", -- Шрифт текста
-            TextColor = Color3.fromRGB(240, 240, 240), -- Цвет текста (светло-серый)
+            TextColor = Color3.fromRGB(0, 0, 0), -- Цвет текста (светло-серый)
         
             Background = Color3.fromRGB(25, 25, 25), -- Фон (тёмный серый)
             Topbar = Color3.fromRGB(34, 34, 34), -- Цвет верхней панели (ещё темнее серый)
@@ -62,7 +62,7 @@ local RayfieldLibrary = {
 		},
 		Light = {
 			TextFont = "Default", -- Шрифт текста
-			TextColor = Color3.fromRGB(50, 50, 50), -- Цвет текста (черный)
+			TextColor = Color3.fromRGB(0, 0, 0), -- Цвет текста (черный)
 
 			Background = Color3.fromRGB(255, 255, 255), -- Фон (белый)
 			Topbar = Color3.fromRGB(217, 217, 217), -- Цвет верхней панели (светло-серый)
