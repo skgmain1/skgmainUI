@@ -75,7 +75,7 @@ local RayfieldLibrary = {
 			TabStroke = Color3.fromRGB(112, 112, 112), -- Обводка вкладок (тёмно-серый)
 			TabBackgroundSelected = Color3.fromRGB(138, 43, 226), -- Фон выбранной вкладки (фиолетовый)
 			TabTextColor = Color3.fromRGB(0, 0, 0), -- Цвет текста вкладок (черный)
-			SelectedTabTextColor = Color3.fromRGB(64, 64, 64), -- Цвет текста выбранной вкладки (Темно Серый)
+			SelectedTabTextColor = Color3.fromRGB(180, 180, 180), -- Цвет текста выбранной вкладки (Темно Серый)
 
 			ElementBackground = Color3.fromRGB(198, 198, 198), -- Фон элементов (светло-серый)
 			ElementBackgroundHover = Color3.fromRGB(230, 230, 230), -- Фон при наведении (очень светло-серый)
