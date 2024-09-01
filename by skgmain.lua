@@ -89,11 +89,11 @@ local RayfieldLibrary = {
 
     			ToggleBackground = Color3.fromRGB(170, 203, 60), -- Фон переключателя (оливковый)
     			ToggleEnabled = Color3.fromRGB(32, 214, 29), -- Включённый переключатель (зелёный)
-    			ToggleDisabled = Color3.fromRGB(100, 22, 23), -- Выключенный переключатель (тёмно-красный)
+    			ToggleDisabled = Color3.fromRGB(100, 100, 100), -- Выключенный переключатель (серый)
     			ToggleEnabledStroke = Color3.fromRGB(17, 255, 0), -- Обводка включённого переключателя (ярко-зелёный)
-    			ToggleDisabledStroke = Color3.fromRGB(65, 8, 8), -- Обводка выключенного переключателя (тёмно-красный)
+    			ToggleDisabledStroke = Color3.fromRGB(125, 125, 125), -- Обводка выключенного переключателя (Серый)
     			ToggleEnabledOuterStroke = Color3.fromRGB(0, 170, 0), -- Внешняя обводка включённого переключателя (зелёный)
-    			ToggleDisabledOuterStroke = Color3.fromRGB(170, 0, 0), -- Внешняя обводка выключенного переключателя (красный)
+    			ToggleDisabledOuterStroke = Color3.fromRGB(65, 65, 65), -- Внешняя обводка выключенного переключателя (Серый)
 
     			InputBackground = Color3.fromRGB(31, 159, 71), -- Фон поля ввода (зелёный)
     			InputStroke = Color3.fromRGB(19, 65, 31), -- Обводка поля ввода (тёмно-зелёный)
