@@ -48,13 +48,14 @@ local RayfieldLibrary = {
 			SliderProgress = Color3.fromRGB(90, 60, 130), -- Светло-фиолетовый прогресс
 			SliderStroke = Color3.fromRGB(40, 20, 70), -- Темно-фиолетовая обводка слайдера
 
-			ToggleBackground = Color3.fromRGB(80, 40, 120), -- Фиолетовый фон для переключателей
-			ToggleEnabled = Color3.fromRGB(130, 70, 180), -- Ярко-фиолетовый при включении
-			ToggleDisabled = Color3.fromRGB(50, 50, 75), -- Темно-черный при отключении
-			ToggleEnabledStroke = Color3.fromRGB(150, 80, 200), -- Ярко-фиолетовая обводка при включении
-			ToggleDisabledStroke = Color3.fromRGB(80, 80, 100), -- Обводка при отключении
-			ToggleEnabledOuterStroke = Color3.fromRGB(100, 50, 140), -- Внешняя обводка при включении
-			ToggleDisabledOuterStroke = Color3.fromRGB(60, 60, 80), -- Внешняя обводка при отключении
+			-- Изменения для Toggle:
+			ToggleBackground = Color3.fromRGB(50, 50, 50), -- Серый фон для переключателей
+			ToggleEnabled = Color3.fromRGB(100, 100, 100), -- Светло-серый при включении
+			ToggleDisabled = Color3.fromRGB(60, 60, 60), -- Темно-серый при отключении
+			ToggleEnabledStroke = Color3.fromRGB(120, 120, 120), -- Светло-серая обводка при включении
+			ToggleDisabledStroke = Color3.fromRGB(80, 80, 80), -- Обводка при отключении
+			ToggleEnabledOuterStroke = Color3.fromRGB(90, 90, 90), -- Внешняя обводка при включении
+			ToggleDisabledOuterStroke = Color3.fromRGB(70, 70, 70), -- Внешняя обводка при отключении
 
 			InputBackground = Color3.fromRGB(80, 40, 120), -- Фиолетовый фон полей ввода
 			InputStroke = Color3.fromRGB(50, 50, 75), -- Темно-черная обводка полей ввода
@@ -62,6 +63,7 @@ local RayfieldLibrary = {
 		}
 	}
 }
+
 
 
 
