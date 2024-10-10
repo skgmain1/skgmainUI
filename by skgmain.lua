@@ -23,42 +23,42 @@ local RayfieldLibrary = {
 	Theme = {
 		Default = {
 			TextFont = "Default", -- Default will use the various font faces used across Rayfield
-			TextColor = Color3.fromRGB(200, 160, 255), -- Светло-фиолетовый для текста
+			TextColor = Color3.fromRGB(180, 160, 230), -- Светло-фиолетовый для текста
 
-			Background = Color3.fromRGB(15, 15, 15), -- Темно-черный фон
-			Topbar = Color3.fromRGB(25, 25, 35), -- Темно-серый с фиолетовым оттенком
-			Shadow = Color3.fromRGB(10, 10, 15), -- Почти черный для теней
+			Background = Color3.fromRGB(10, 10, 20), -- Темно-черный фон
+			Topbar = Color3.fromRGB(20, 20, 30), -- Темно-серый с фиолетовым оттенком
+			Shadow = Color3.fromRGB(5, 5, 10), -- Почти черный для теней
 
-			NotificationBackground = Color3.fromRGB(20, 20, 30), -- Темный фиолетовый фон уведомлений
-			NotificationActionsBackground = Color3.fromRGB(100, 80, 120), -- Светло-фиолетовый для действий
+			NotificationBackground = Color3.fromRGB(15, 10, 25), -- Темно-фиолетовый фон уведомлений
+			NotificationActionsBackground = Color3.fromRGB(90, 60, 120), -- Светло-фиолетовый для действий
 
-			TabBackground = Color3.fromRGB(40, 40, 60), -- Серо-фиолетовый фон вкладок
-			TabStroke = Color3.fromRGB(50, 50, 70), -- Темно-фиолетовый обводка вкладок
-			TabBackgroundSelected = Color3.fromRGB(80, 80, 120), -- Светло-фиолетовый при выделении
-			TabTextColor = Color3.fromRGB(180, 180, 200), -- Светло-серый текст
-			SelectedTabTextColor = Color3.fromRGB(100, 100, 150), -- Темно-фиолетовый текст при выделении
+			TabBackground = Color3.fromRGB(30, 30, 50), -- Серо-фиолетовый фон вкладок
+			TabStroke = Color3.fromRGB(45, 45, 60), -- Темно-фиолетовая обводка вкладок
+			TabBackgroundSelected = Color3.fromRGB(70, 70, 110), -- Светло-фиолетовый при выделении
+			TabTextColor = Color3.fromRGB(160, 160, 180), -- Светло-серый текст
+			SelectedTabTextColor = Color3.fromRGB(90, 90, 130), -- Темно-фиолетовый текст при выделении
 
-			ElementBackground = Color3.fromRGB(25, 25, 35), -- Темно-серый с фиолетовым
+			ElementBackground = Color3.fromRGB(20, 20, 30), -- Темно-серый с фиолетовым
 			ElementBackgroundHover = Color3.fromRGB(35, 35, 45), -- Светло-серый при наведении
-			SecondaryElementBackground = Color3.fromRGB(20, 20, 30), -- Более темный серый для вторичных элементов
-			ElementStroke = Color3.fromRGB(50, 50, 60), -- Обводка элементов
-			SecondaryElementStroke = Color3.fromRGB(40, 40, 50), -- Для вторичных элементов
+			SecondaryElementBackground = Color3.fromRGB(15, 15, 25), -- Более темный серый для вторичных элементов
+			ElementStroke = Color3.fromRGB(45, 45, 55), -- Обводка элементов
+			SecondaryElementStroke = Color3.fromRGB(35, 35, 45), -- Для вторичных элементов
 
-			SliderBackground = Color3.fromRGB(80, 40, 120), -- Темно-фиолетовый для слайдера
-			SliderProgress = Color3.fromRGB(150, 100, 200), -- Светло-фиолетовый для прогресса
-			SliderStroke = Color3.fromRGB(60, 30, 90), -- Обводка слайдера
+			SliderBackground = Color3.fromRGB(70, 40, 110), -- Темно-фиолетовый для слайдера
+			SliderProgress = Color3.fromRGB(140, 100, 180), -- Светло-фиолетовый для прогресса
+			SliderStroke = Color3.fromRGB(55, 30, 85), -- Обводка слайдера
 
-			ToggleBackground = Color3.fromRGB(30, 30, 40), -- Темно-серый с фиолетовым
-			ToggleEnabled = Color3.fromRGB(120, 60, 180), -- Ярко-фиолетовый при включении
+			ToggleBackground = Color3.fromRGB(25, 25, 35), -- Темно-серый с фиолетовым
+			ToggleEnabled = Color3.fromRGB(110, 60, 160), -- Ярко-фиолетовый при включении
 			ToggleDisabled = Color3.fromRGB(60, 60, 80), -- Серо-фиолетовый при отключении
-			ToggleEnabledStroke = Color3.fromRGB(140, 70, 200), -- Ярко-фиолетовая обводка при включении
+			ToggleEnabledStroke = Color3.fromRGB(130, 70, 180), -- Ярко-фиолетовая обводка при включении
 			ToggleDisabledStroke = Color3.fromRGB(80, 80, 100), -- Обводка при отключении
-			ToggleEnabledOuterStroke = Color3.fromRGB(80, 80, 120), -- Внешняя обводка при включении
+			ToggleEnabledOuterStroke = Color3.fromRGB(75, 75, 110), -- Внешняя обводка при включении
 			ToggleDisabledOuterStroke = Color3.fromRGB(50, 50, 70), -- Внешняя обводка при отключении
 
-			InputBackground = Color3.fromRGB(25, 25, 35), -- Темный фон полей ввода
-			InputStroke = Color3.fromRGB(60, 60, 90), -- Обводка полей ввода
-			PlaceholderColor = Color3.fromRGB(150, 150, 180) -- Серо-фиолетовый для текста-заполнителя
+			InputBackground = Color3.fromRGB(20, 20, 30), -- Темный фон полей ввода
+			InputStroke = Color3.fromRGB(55, 55, 80), -- Обводка полей ввода
+			PlaceholderColor = Color3.fromRGB(140, 140, 170) -- Серо-фиолетовый для текста-заполнителя
 		}
 	}
 }
@@ -1763,7 +1763,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 				DropdownOption.Visible = true
 
 				if DropdownSettings.CurrentOption == Option then
-					DropdownOption.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+					DropdownOption.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 				end
 
 				DropdownOption.BackgroundTransparency = 1
@@ -1818,7 +1818,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 							Dropdown.Selected.Text = DropdownSettings.CurrentOption[1]
 						end
 						TweenService:Create(DropdownOption.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {Transparency = 1}):Play()
-						TweenService:Create(DropdownOption, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(40, 40, 40)}):Play()
+						TweenService:Create(DropdownOption, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(0, 0, 0)}):Play()
 						Debounce = true
 						task.wait(0.2)
 						TweenService:Create(DropdownOption.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {Transparency = 0}):Play()
@@ -1842,7 +1842,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 					for _, droption in ipairs(Dropdown.List:GetChildren()) do
 						if droption.ClassName == "Frame" and droption.Name ~= "Placeholder" and not table.find(DropdownSettings.CurrentOption, droption.Name) then
-							TweenService:Create(droption, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(30, 30, 30)}):Play()
+							TweenService:Create(droption, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(48, 25, 52)}):Play()
 						end
 					end
 					if not DropdownSettings.MultipleOptions then
@@ -1868,9 +1868,9 @@ function RayfieldLibrary:CreateWindow(Settings)
 			for _, droption in ipairs(Dropdown.List:GetChildren()) do
 				if droption.ClassName == "Frame" and droption.Name ~= "Placeholder" then
 					if not table.find(DropdownSettings.CurrentOption, droption.Name) then
-						droption.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+						droption.BackgroundColor3 = Color3.fromRGB(48, 25, 52)
 					else
-						droption.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+						droption.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 					end
 				end
 			end
@@ -1916,9 +1916,9 @@ function RayfieldLibrary:CreateWindow(Settings)
 				for _, droption in ipairs(Dropdown.List:GetChildren()) do
 					if droption.ClassName == "Frame" and droption.Name ~= "Placeholder" then
 						if not table.find(DropdownSettings.CurrentOption, droption.Name) then
-							droption.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+							droption.BackgroundColor3 = Color3.fromRGB(48, 25, 52)
 						else
-							droption.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+							droption.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 						end
 					end
 				end
@@ -2145,7 +2145,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 					TweenService:Create(Toggle.Switch.Indicator, TweenInfo.new(0.4, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Size = UDim2.new(0,12,0,12)}):Play()
 					TweenService:Create(Toggle.Switch.Indicator.UIStroke, TweenInfo.new(0.55, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Color = SelectedTheme.ToggleEnabledStroke}):Play()
 					TweenService:Create(Toggle.Switch.Indicator, TweenInfo.new(0.8, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = SelectedTheme.ToggleEnabled}):Play()
-					TweenService:Create(Toggle.Switch.UIStroke, TweenInfo.new(0.55, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Color = Color3.fromRGB(100,100,100)}):Play()
+					TweenService:Create(Toggle.Switch.UIStroke, TweenInfo.new(0.55, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Color = Color3.fromRGB(128,0,128)}):Play()
 					task.wait(0.05)
 					TweenService:Create(Toggle.Switch.Indicator, TweenInfo.new(0.45, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Size = UDim2.new(0,17,0,17)}):Play()	
 					task.wait(0.15)
@@ -2159,7 +2159,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 					TweenService:Create(Toggle.Switch.Indicator, TweenInfo.new(0.4, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Size = UDim2.new(0,12,0,12)}):Play()
 					TweenService:Create(Toggle.Switch.Indicator.UIStroke, TweenInfo.new(0.55, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Color = SelectedTheme.ToggleDisabledStroke}):Play()
 					TweenService:Create(Toggle.Switch.Indicator, TweenInfo.new(0.8, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {BackgroundColor3 = SelectedTheme.ToggleDisabled}):Play()
-					TweenService:Create(Toggle.Switch.UIStroke, TweenInfo.new(0.55, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Color = Color3.fromRGB(65,65,65)}):Play()
+					TweenService:Create(Toggle.Switch.UIStroke, TweenInfo.new(0.55, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Color = Color3.fromRGB(75,0,130)}):Play()
 					task.wait(0.05)
 					TweenService:Create(Toggle.Switch.Indicator, TweenInfo.new(0.4, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Size = UDim2.new(0,17,0,17)}):Play()
 					task.wait(0.15)
