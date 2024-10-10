@@ -30,8 +30,8 @@ local RayfieldLibrary = {
 			Shadow = Color3.fromRGB(30, 30, 30), -- Темно-серая тень
 
 			-- Фиолетовые цвета для уведомлений
-			NotificationBackground = Color3.fromRGB(80, 40, 120), -- Фиолетовый фон уведомлений
-			NotificationActionsBackground = Color3.fromRGB(50, 0, 75), -- Темный фиолетовый для действий
+			NotificationBackground = Color3.fromRGB(100, 50, 150), -- Фиолетовый фон уведомлений
+			NotificationActionsBackground = Color3.fromRGB(140, 60, 180), -- Светло-фиолетовый для действий
 
 			-- Фиолетовые тона для вкладок (tabs)
 			TabBackground = Color3.fromRGB(80, 40, 120), -- Фиолетовый фон вкладок
