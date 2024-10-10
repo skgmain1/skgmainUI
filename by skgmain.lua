@@ -46,10 +46,12 @@ local RayfieldLibrary = {
 			ElementStroke = Color3.fromRGB(50, 50, 50),
 			SecondaryElementStroke = Color3.fromRGB(40, 40, 40), -- For labels and paragraphs
 
-			SliderBackground = Color3.fromRGB(43, 105, 159),
-			SliderProgress = Color3.fromRGB(43, 105, 159),
-			SliderStroke = Color3.fromRGB(48, 119, 177),
+			-- Заменено на черный или фиолетовый для слайдера
+			SliderBackground = Color3.fromRGB(80, 40, 120), -- Фиолетовый фон слайдера
+			SliderProgress = Color3.fromRGB(120, 60, 180), -- Ярко-фиолетовый для прогресса
+			SliderStroke = Color3.fromRGB(100, 50, 150), -- Светло-фиолетовая обводка
 
+			-- Переключатели (Toggle)
 			ToggleBackground = Color3.fromRGB(30, 30, 30),
 			ToggleEnabled = Color3.fromRGB(120, 50, 170), -- Фиолетовый при включении
 			ToggleDisabled = Color3.fromRGB(100, 100, 100),
@@ -64,6 +66,7 @@ local RayfieldLibrary = {
 		}
 	}
 }
+
 
 
 
