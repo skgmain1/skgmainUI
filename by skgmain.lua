@@ -25,31 +25,36 @@ local RayfieldLibrary = {
 			TextFont = "Default", -- Default will use the various font faces used across Rayfield
 			TextColor = Color3.fromRGB(0, 0, 0), -- Черный для текста
 
-			Background = Color3.fromRGB(70, 40, 110), -- Темно-фиолетовый фон
-			Topbar = Color3.fromRGB(90, 60, 130), -- Светло-фиолетовый для верхней панели
-			Shadow = Color3.fromRGB(30, 20, 40), -- Темно-фиолетовый для теней
+			-- Серые тона для основного фона и элементов
+			Background = Color3.fromRGB(50, 50, 50), -- Серый фон
+			Topbar = Color3.fromRGB(70, 70, 70), -- Темно-серый верхний бар
+			Shadow = Color3.fromRGB(30, 30, 30), -- Темно-серая тень
 
+			-- Фиолетовые цвета для уведомлений
 			NotificationBackground = Color3.fromRGB(80, 40, 120), -- Фиолетовый фон уведомлений
 			NotificationActionsBackground = Color3.fromRGB(50, 0, 75), -- Темный фиолетовый для действий
 
-			TabBackground = Color3.fromRGB(25, 25, 35), -- Черный фон вкладок
-			TabStroke = Color3.fromRGB(40, 40, 50), -- Темно-черная обводка вкладок
-			TabBackgroundSelected = Color3.fromRGB(90, 60, 130), -- Светло-фиолетовый при выделении
-			TabTextColor = Color3.fromRGB(0, 0, 0), -- Черный текст
-			SelectedTabTextColor = Color3.fromRGB(0, 0, 0), -- Черный текст при выделении
+			-- Фиолетовые тона для вкладок (tabs)
+			TabBackground = Color3.fromRGB(80, 40, 120), -- Фиолетовый фон вкладок
+			TabStroke = Color3.fromRGB(100, 50, 150), -- Светло-фиолетовая обводка вкладок
+			TabBackgroundSelected = Color3.fromRGB(120, 60, 180), -- Ярко-фиолетовый при выделении
+			TabTextColor = Color3.fromRGB(255, 255, 255), -- Белый текст
+			SelectedTabTextColor = Color3.fromRGB(200, 200, 255), -- Светло-фиолетовый текст при выделении
 
-			ElementBackground = Color3.fromRGB(80, 40, 120), -- Фиолетовый для элементов
-			ElementBackgroundHover = Color3.fromRGB(100, 50, 150), -- Более светлый фиолетовый при наведении
-			SecondaryElementBackground = Color3.fromRGB(25, 25, 35), -- Темно-черный для вторичных элементов
-			ElementStroke = Color3.fromRGB(40, 20, 70), -- Темно-фиолетовая обводка элементов
-			SecondaryElementStroke = Color3.fromRGB(30, 30, 50), -- Черная обводка вторичных элементов
+			-- Серые тона для элементов интерфейса
+			ElementBackground = Color3.fromRGB(60, 60, 60), -- Темно-серый для элементов
+			ElementBackgroundHover = Color3.fromRGB(80, 80, 80), -- Более светлый серый при наведении
+			SecondaryElementBackground = Color3.fromRGB(50, 50, 50), -- Темно-серый для вторичных элементов
+			ElementStroke = Color3.fromRGB(90, 90, 90), -- Серо-черная обводка элементов
+			SecondaryElementStroke = Color3.fromRGB(70, 70, 70), -- Темная обводка вторичных элементов
 
-			SliderBackground = Color3.fromRGB(50, 20, 75), -- Фиолетовый фон слайдера
-			SliderProgress = Color3.fromRGB(90, 60, 130), -- Светло-фиолетовый прогресс
-			SliderStroke = Color3.fromRGB(40, 20, 70), -- Темно-фиолетовая обводка слайдера
+			-- Серый для слайдера
+			SliderBackground = Color3.fromRGB(60, 60, 60), -- Серый фон слайдера
+			SliderProgress = Color3.fromRGB(100, 100, 100), -- Светло-серый прогресс
+			SliderStroke = Color3.fromRGB(80, 80, 80), -- Серо-черная обводка слайдера
 
-			-- Изменения для Toggle:
-			ToggleBackground = Color3.fromRGB(50, 50, 50), -- Серый фон для переключателей
+			-- Серые цвета для переключателей (Toggle)
+			ToggleBackground = Color3.fromRGB(50, 50, 50), -- Серый фон переключателей
 			ToggleEnabled = Color3.fromRGB(100, 100, 100), -- Светло-серый при включении
 			ToggleDisabled = Color3.fromRGB(60, 60, 60), -- Темно-серый при отключении
 			ToggleEnabledStroke = Color3.fromRGB(120, 120, 120), -- Светло-серая обводка при включении
@@ -57,12 +62,14 @@ local RayfieldLibrary = {
 			ToggleEnabledOuterStroke = Color3.fromRGB(90, 90, 90), -- Внешняя обводка при включении
 			ToggleDisabledOuterStroke = Color3.fromRGB(70, 70, 70), -- Внешняя обводка при отключении
 
-			InputBackground = Color3.fromRGB(80, 40, 120), -- Фиолетовый фон полей ввода
-			InputStroke = Color3.fromRGB(50, 50, 75), -- Темно-черная обводка полей ввода
-			PlaceholderColor = Color3.fromRGB(180, 180, 210) -- Светло-фиолетовый текст-заполнитель
+			-- Серые цвета для полей ввода
+			InputBackground = Color3.fromRGB(60, 60, 60), -- Темно-серый фон полей ввода
+			InputStroke = Color3.fromRGB(90, 90, 90), -- Серо-черная обводка полей ввода
+			PlaceholderColor = Color3.fromRGB(180, 180, 180) -- Светло-серый текст-заполнитель
 		}
 	}
 }
+
 
 
 
