@@ -21,47 +21,45 @@ local RayfieldLibrary = {
 	Flags = {},
 	Theme = {
 		Default = {
-			TextFont = "Default", -- Default will use the various font faces used across Rayfield
-			TextColor = Color3.fromRGB(0, 0, 0), -- Черный для текста
+			TextColor = Color3.fromRGB(230, 230, 230), -- Light gray for high contrast on dark backgrounds
 
-			Background = Color3.fromRGB(25, 25, 25),
-			Topbar = Color3.fromRGB(70, 70, 70), -- Темно-серый верхний бар
-			Shadow = Color3.fromRGB(30, 30, 30), -- Темно-серая тень
+			Background = Color3.fromRGB(20, 25, 30), -- Very dark blue-gray base
+			Topbar = Color3.fromRGB(30, 35, 40), -- Slightly lighter topbar
+			Shadow = Color3.fromRGB(15, 20, 25), -- Deep shadow for layering effect
 
-			-- Фиолетовые цвета для уведомлений
-			NotificationBackground = Color3.fromRGB(100, 50, 150), -- Фиолетовый фон уведомлений
-			NotificationActionsBackground = Color3.fromRGB(140, 60, 180), -- Светло-фиолетовый для действий
+			NotificationBackground = Color3.fromRGB(25, 30, 35),
+			NotificationActionsBackground = Color3.fromRGB(45, 50, 55),
 
-			-- Фиолетовые тона для вкладок (tabs)
-			TabBackground = Color3.fromRGB(80, 40, 120), -- Фиолетовый фон вкладок
-			TabStroke = Color3.fromRGB(100, 50, 150), -- Светло-фиолетовая обводка вкладок
-			TabBackgroundSelected = Color3.fromRGB(120, 60, 180), -- Ярко-фиолетовый при выделении
-			TabTextColor = Color3.fromRGB(240, 240, 240),
-			SelectedTabTextColor = Color3.fromRGB(50, 50, 50),
+			TabBackground = Color3.fromRGB(35, 40, 45),
+			TabStroke = Color3.fromRGB(45, 50, 55), -- Darkened stroke to match dark theme
+			TabBackgroundSelected = Color3.fromRGB(40, 70, 100), -- Bold blue for selected tab
+			TabTextColor = Color3.fromRGB(200, 200, 200),
+			SelectedTabTextColor = Color3.fromRGB(255, 255, 255),
 
-			ElementBackground = Color3.fromRGB(35, 35, 35),
-			ElementBackgroundHover = Color3.fromRGB(40, 40, 40),
-			SecondaryElementBackground = Color3.fromRGB(25, 25, 25), -- For labels and paragraphs
-			ElementStroke = Color3.fromRGB(50, 50, 50),
-			SecondaryElementStroke = Color3.fromRGB(40, 40, 40), -- For labels and paragraphs
+			ElementBackground = Color3.fromRGB(30, 35, 40),
+			ElementBackgroundHover = Color3.fromRGB(40, 45, 50),
+			SecondaryElementBackground = Color3.fromRGB(35, 40, 45), 
+			ElementStroke = Color3.fromRGB(45, 50, 55), -- Deeper, less white stroke
+			SecondaryElementStroke = Color3.fromRGB(40, 45, 50), -- Slightly lighter for subtle contrast
 
-			-- Заменено на черный или фиолетовый для слайдера
-			SliderBackground = Color3.fromRGB(80, 40, 120), -- Фиолетовый фон слайдера
-			SliderProgress = Color3.fromRGB(120, 60, 180), -- Ярко-фиолетовый для прогресса
-			SliderStroke = Color3.fromRGB(100, 50, 150), -- Светло-фиолетовая обводка
+			SliderBackground = Color3.fromRGB(0, 90, 180),
+			SliderProgress = Color3.fromRGB(0, 120, 210),
+			SliderStroke = Color3.fromRGB(0, 150, 240),
 
-			-- Переключатели (Toggle)
-			ToggleBackground = Color3.fromRGB(30, 30, 30),
-			ToggleEnabled = Color3.fromRGB(120, 50, 170), -- Фиолетовый при включении
-			ToggleDisabled = Color3.fromRGB(100, 100, 100),
-			ToggleEnabledStroke = Color3.fromRGB(140, 70, 190), -- Фиолетовая обводка при включении
-			ToggleDisabledStroke = Color3.fromRGB(125, 125, 125),
-			ToggleEnabledOuterStroke = Color3.fromRGB(100, 100, 100),
-			ToggleDisabledOuterStroke = Color3.fromRGB(65, 65, 65),
+			ToggleBackground = Color3.fromRGB(35, 40, 45),
+			ToggleEnabled = Color3.fromRGB(0, 120, 210), -- Bright blue for enabled state
+			ToggleDisabled = Color3.fromRGB(80, 80, 80),
+			ToggleEnabledStroke = Color3.fromRGB(0, 150, 240),
+			ToggleDisabledStroke = Color3.fromRGB(90, 90, 90),
+			ToggleEnabledOuterStroke = Color3.fromRGB(20, 100, 180), -- Darker outer stroke for toggle
+			ToggleDisabledOuterStroke = Color3.fromRGB(50, 50, 50),
 
-			InputBackground = Color3.fromRGB(30, 30, 30),
-			InputStroke = Color3.fromRGB(65, 65, 65),
-			PlaceholderColor = Color3.fromRGB(178, 178, 178)
+			DropdownSelected = Color3.fromRGB(30, 70, 90), -- Muted blue for dropdown
+			DropdownUnselected = Color3.fromRGB(25, 30, 35),
+
+			InputBackground = Color3.fromRGB(25, 30, 35),
+			InputStroke = Color3.fromRGB(45, 50, 55), -- Deepened input stroke
+			PlaceholderColor = Color3.fromRGB(150, 150, 160)
 		}
 	}
 }
