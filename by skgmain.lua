@@ -21,6 +21,132 @@ local RayfieldLibrary = {
 	Flags = {},
 	Theme = {
 		Default = {
+			TextColor = Color3.fromRGB(240, 240, 240),
+
+			Background = Color3.fromRGB(25, 25, 25),
+			Topbar = Color3.fromRGB(34, 34, 34),
+			Shadow = Color3.fromRGB(20, 20, 20),
+
+			NotificationBackground = Color3.fromRGB(20, 20, 20),
+			NotificationActionsBackground = Color3.fromRGB(230, 230, 230),
+
+			TabBackground = Color3.fromRGB(80, 80, 80),
+			TabStroke = Color3.fromRGB(85, 85, 85),
+			TabBackgroundSelected = Color3.fromRGB(210, 210, 210),
+			TabTextColor = Color3.fromRGB(240, 240, 240),
+			SelectedTabTextColor = Color3.fromRGB(50, 50, 50),
+
+			ElementBackground = Color3.fromRGB(35, 35, 35),
+			ElementBackgroundHover = Color3.fromRGB(40, 40, 40),
+			SecondaryElementBackground = Color3.fromRGB(25, 25, 25), -- For labels and paragraphs
+			ElementStroke = Color3.fromRGB(50, 50, 50),
+			SecondaryElementStroke = Color3.fromRGB(40, 40, 40), -- For labels and paragraphs
+
+			SliderBackground = Color3.fromRGB(50, 138, 220),
+			SliderProgress = Color3.fromRGB(50, 138, 220),
+			SliderStroke = Color3.fromRGB(58, 163, 255),
+
+			ToggleBackground = Color3.fromRGB(30, 30, 30),
+			ToggleEnabled = Color3.fromRGB(0, 146, 214),
+			ToggleDisabled = Color3.fromRGB(100, 100, 100),
+			ToggleEnabledStroke = Color3.fromRGB(0, 170, 255),
+			ToggleDisabledStroke = Color3.fromRGB(125, 125, 125),
+			ToggleEnabledOuterStroke = Color3.fromRGB(100, 100, 100),
+			ToggleDisabledOuterStroke = Color3.fromRGB(65, 65, 65),
+
+			DropdownSelected = Color3.fromRGB(40, 40, 40),
+			DropdownUnselected = Color3.fromRGB(30, 30, 30),
+
+			InputBackground = Color3.fromRGB(30, 30, 30),
+			InputStroke = Color3.fromRGB(65, 65, 65),
+			PlaceholderColor = Color3.fromRGB(178, 178, 178)
+		},
+		
+		Light = {
+			TextColor = Color3.fromRGB(40, 40, 40), -- Darker text for readability on light background
+
+			Background = Color3.fromRGB(245, 245, 245),
+			Topbar = Color3.fromRGB(230, 230, 230),
+			Shadow = Color3.fromRGB(200, 200, 200), -- Subtle shadow to enhance layering
+
+			NotificationBackground = Color3.fromRGB(250, 250, 250), -- Light background for notifications
+			NotificationActionsBackground = Color3.fromRGB(240, 240, 240), -- Slight contrast for actions
+
+			TabBackground = Color3.fromRGB(235, 235, 235),
+			TabStroke = Color3.fromRGB(215, 215, 215),
+			TabBackgroundSelected = Color3.fromRGB(255, 255, 255),
+			TabTextColor = Color3.fromRGB(80, 80, 80),
+			SelectedTabTextColor = Color3.fromRGB(0, 0, 0),
+
+			ElementBackground = Color3.fromRGB(240, 240, 240),
+			ElementBackgroundHover = Color3.fromRGB(225, 225, 225),
+			SecondaryElementBackground = Color3.fromRGB(235, 235, 235), -- Unified look for labels and paragraphs
+			ElementStroke = Color3.fromRGB(210, 210, 210),
+			SecondaryElementStroke = Color3.fromRGB(210, 210, 210),
+
+			SliderBackground = Color3.fromRGB(150, 180, 220), -- Softer slider background for light theme
+			SliderProgress = Color3.fromRGB(100, 150, 200), 
+			SliderStroke = Color3.fromRGB(120, 170, 220),
+
+			ToggleBackground = Color3.fromRGB(220, 220, 220), -- Light toggle background
+			ToggleEnabled = Color3.fromRGB(0, 146, 214),
+			ToggleDisabled = Color3.fromRGB(150, 150, 150),
+			ToggleEnabledStroke = Color3.fromRGB(0, 170, 255),
+			ToggleDisabledStroke = Color3.fromRGB(170, 170, 170),
+			ToggleEnabledOuterStroke = Color3.fromRGB(100, 100, 100),
+			ToggleDisabledOuterStroke = Color3.fromRGB(180, 180, 180),
+
+			DropdownSelected = Color3.fromRGB(230, 230, 230), -- Lighten to match theme
+			DropdownUnselected = Color3.fromRGB(220, 220, 220),
+
+			InputBackground = Color3.fromRGB(240, 240, 240),
+			InputStroke = Color3.fromRGB(180, 180, 180),
+			PlaceholderColor = Color3.fromRGB(140, 140, 140)
+		},
+		
+		Green = {
+			TextColor = Color3.fromRGB(30, 60, 30), -- Deep green for readability
+
+			Background = Color3.fromRGB(235, 245, 235), -- Soft green background
+			Topbar = Color3.fromRGB(210, 230, 210), -- Slightly darker for contrast
+			Shadow = Color3.fromRGB(200, 220, 200),
+
+			NotificationBackground = Color3.fromRGB(240, 250, 240),
+			NotificationActionsBackground = Color3.fromRGB(220, 235, 220),
+
+			TabBackground = Color3.fromRGB(215, 235, 215),
+			TabStroke = Color3.fromRGB(190, 210, 190),
+			TabBackgroundSelected = Color3.fromRGB(245, 255, 245),
+			TabTextColor = Color3.fromRGB(50, 80, 50),
+			SelectedTabTextColor = Color3.fromRGB(20, 60, 20),
+
+			ElementBackground = Color3.fromRGB(225, 240, 225),
+			ElementBackgroundHover = Color3.fromRGB(210, 225, 210),
+			SecondaryElementBackground = Color3.fromRGB(235, 245, 235), 
+			ElementStroke = Color3.fromRGB(180, 200, 180),
+			SecondaryElementStroke = Color3.fromRGB(180, 200, 180),
+
+			SliderBackground = Color3.fromRGB(90, 160, 90),
+			SliderProgress = Color3.fromRGB(70, 130, 70),
+			SliderStroke = Color3.fromRGB(100, 180, 100),
+
+			ToggleBackground = Color3.fromRGB(215, 235, 215),
+			ToggleEnabled = Color3.fromRGB(60, 130, 60),
+			ToggleDisabled = Color3.fromRGB(150, 175, 150),
+			ToggleEnabledStroke = Color3.fromRGB(80, 150, 80),
+			ToggleDisabledStroke = Color3.fromRGB(130, 150, 130),
+			ToggleEnabledOuterStroke = Color3.fromRGB(100, 160, 100), -- Outer stroke for enabled toggle
+			ToggleDisabledOuterStroke = Color3.fromRGB(160, 180, 160), -- Outer stroke for disabled toggle
+
+			DropdownSelected = Color3.fromRGB(225, 240, 225),
+			DropdownUnselected = Color3.fromRGB(210, 225, 210),
+
+			InputBackground = Color3.fromRGB(235, 245, 235),
+			InputStroke = Color3.fromRGB(180, 200, 180),
+			PlaceholderColor = Color3.fromRGB(120, 140, 120)
+		},
+		
+		DarkBlue = {
 			TextColor = Color3.fromRGB(230, 230, 230), -- Light gray for high contrast on dark backgrounds
 
 			Background = Color3.fromRGB(20, 25, 30), -- Very dark blue-gray base
@@ -61,8 +187,12 @@ local RayfieldLibrary = {
 			InputStroke = Color3.fromRGB(45, 50, 55), -- Deepened input stroke
 			PlaceholderColor = Color3.fromRGB(150, 150, 160)
 		}
+
+
+
 	}
 }
+
 
 -- Services
 local UserInputService = game:GetService("UserInputService")
@@ -2392,7 +2522,7 @@ function RayfieldLibrary:LoadConfiguration()
 	end
 end
 
---ChangeTheme('Green')
+ChangeTheme('DarkBlue')
 
 if useStudio then
 	-- run w/ studio
