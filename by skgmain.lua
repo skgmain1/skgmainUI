@@ -210,7 +210,7 @@ if RunService:IsStudio() then
 end
 
 -- Interface Management
-local Rayfield = useStudio and script.Parent:FindFirstChild('Rayfield') or game:GetObjects("rbxassetid://10804731440")[1]
+local Rayfield = useStudio and script.Parent:FindFirstChild('Rayfield') or game:GetObjects("rbxassetid://134415566685128")[1]
 
 Rayfield.Enabled = false
 
@@ -279,7 +279,7 @@ local Notifications = Rayfield.Notifications
 
 local SelectedTheme = RayfieldLibrary.Theme.Default
 
-function ChangeTheme(ThemeName)
+function (ThemeName)
 	SelectedTheme = RayfieldLibrary.Theme[ThemeName]
 
 	Rayfield.Main.BackgroundColor3 = SelectedTheme.Background
@@ -2522,7 +2522,7 @@ function RayfieldLibrary:LoadConfiguration()
 	end
 end
 
-ChangeTheme('DarkBlue')
+-- ChangeTheme('DarkBlue')
 
 if useStudio then
 	-- run w/ studio
