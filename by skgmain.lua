@@ -1553,53 +1553,53 @@ function RayfieldLibrary:CreateWindow(Settings)
 		end
 
 		-- Section
-function Tab:CreateSection(SectionName)
-    print("[DEBUG] Starting CreateSection with name:", SectionName)
+		function Tab:CreateSection(SectionName)
+			print("[DEBUG] Starting CreateSection with name:", SectionName)
 
-    local SectionValue = {}
+			local SectionValue = {}
 
-    -- Проверка SDone и создание пространства между секциями
-    if SDone then
-        print("[DEBUG] SDone is true, cloning SectionSpacing")
-        local SectionSpace = Elements.Template.SectionSpacing:Clone()
-        SectionSpace.Visible = true
-        SectionSpace.Parent = TabPage
-        print("[DEBUG] SectionSpacing cloned and parented to TabPage")
-    else
-        print("[DEBUG] SDone is false, no spacing added")
-    end
+			-- Проверка SDone и создание пространства между секциями
+			if SDone then
+				print("[DEBUG] SDone is true, cloning SectionSpacing")
+				local SectionSpace = Elements.Template.SectionSpacing:Clone()
+				SectionSpace.Visible = true
+				SectionSpace.Parent = TabPage
+				print("[DEBUG] SectionSpacing cloned and parented to TabPage")
+			else
+				print("[DEBUG] SDone is false, no spacing added")
+			end
 
-    -- Клонирование и настройка заголовка секции
-    print("[DEBUG] Cloning SectionTitle")
-    local Section = Elements.Template.SectionTitle:Clone()
-    Section.Title.Text = SectionName
-    Section.Visible = true
-    Section.Parent = TabPage
-    print("[DEBUG] SectionTitle cloned, text set to:", SectionName, "and parented to TabPage")
+			-- Клонирование и настройка заголовка секции
+			print("[DEBUG] Cloning SectionTitle")
+			local Section = Elements.Template.SectionTitle:Clone()
+			Section.Title.Text = SectionName
+			Section.Visible = true
+			Section.Parent = TabPage
+			print("[DEBUG] SectionTitle cloned, text set to:", SectionName, "and parented to TabPage")
 
-    -- Анимация прозрачности текста
-    Section.Title.TextTransparency = 1
-    print("[DEBUG] Starting tween for TextTransparency")
-    local tween = TweenService:Create(
-        Section.Title,
-        TweenInfo.new(0.7, Enum.EasingStyle.Exponential),
-        {TextTransparency = 0}
-    )
-    tween:Play()
-    print("[DEBUG] Tween started")
+			-- Анимация прозрачности текста
+			Section.Title.TextTransparency = 1
+			print("[DEBUG] Starting tween for TextTransparency")
+			local tween = TweenService:Create(
+				Section.Title,
+				TweenInfo.new(0.7, Enum.EasingStyle.Exponential),
+				{TextTransparency = 0}
+			)
+			tween:Play()
+			print("[DEBUG] Tween started")
 
-    -- Метод для изменения текста секции
-    function SectionValue:Set(NewSection)
-        print("[DEBUG] SectionValue:Set called with:", NewSection)
-        Section.Title.Text = NewSection
-        print("[DEBUG] Section text updated to:", Section.Title.Text)
-    end
+			-- Метод для изменения текста секции
+			function SectionValue:Set(NewSection)
+				print("[DEBUG] SectionValue:Set called with:", NewSection)
+				Section.Title.Text = NewSection
+				print("[DEBUG] Section text updated to:", Section.Title.Text)
+			end
 
-    SDone = true
-    print("[DEBUG] SDone set to true, section creation finished")
+			SDone = true
+			print("[DEBUG] SDone set to true, section creation finished")
 
-    return SectionValue
-end
+			return SectionValue
+		end
 
 
 		--[[
