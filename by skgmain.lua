@@ -1,5 +1,5 @@
 --[[
-
+TEST 4
 Rayfield Interface Suite
 by Sirius
 
@@ -429,9 +429,10 @@ local function closeSearch()
 	TweenService:Create(Main.Search.Input, TweenInfo.new(0.15, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
 
 	for _, tabbtn in ipairs(TabList:GetChildren()) do
-		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "Placeholder" then
+		local pageHolder = tabbtn:FindFirstChild("PageHolder")
+		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "Placeholder" and pageHolder then
 			tabbtn.Interact.Visible = true
-			if Elements.UIPageLayout.CurrentPage == tabbtn.Page then
+			if Elements.UIPageLayout.CurrentPage == pageHolder.Value then
 				TweenService:Create(tabbtn, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Image, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
@@ -555,8 +556,9 @@ local function Maximise()
 	task.wait(0.1)
 
 	for _, tabbtn in ipairs(TabList:GetChildren()) do
-		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "Placeholder" then
-			if Elements.UIPageLayout.CurrentPage == tabbtn.Page then
+		local pageHolder = tabbtn:FindFirstChild("PageHolder")
+		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "Placeholder" and pageHolder then
+			if Elements.UIPageLayout.CurrentPage == pageHolder.Value then
 				TweenService:Create(tabbtn, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Image, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
@@ -603,8 +605,9 @@ local function Unhide()
 	dragBar.Position = useMobileSizing and UDim2.new(0.5, 0, 0.5, dragOffsetMobile) or UDim2.new(0.5, 0, 0.5, dragOffset)
 
 	for _, tabbtn in ipairs(TabList:GetChildren()) do
-		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "Placeholder" then
-			if Elements.UIPageLayout.CurrentPage == tabbtn.Page then
+		local pageHolder = tabbtn:FindFirstChild("PageHolder")
+		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "Placeholder" and pageHolder then
+			if Elements.UIPageLayout.CurrentPage == pageHolder.Value then
 				TweenService:Create(tabbtn, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Image, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 0}):Play()
@@ -1138,7 +1141,11 @@ function RayfieldLibrary:CreateWindow(Settings)
 		TabPage.Visible = true
 
 		TabPage.LayoutOrder = #Elements:GetChildren()
-		TabButton.Page = TabPage
+
+		local pageHolder = Instance.new("ObjectValue")
+		pageHolder.Name = "PageHolder"
+		pageHolder.Value = TabPage
+		pageHolder.Parent = TabButton
 
 		for _, TemplateElement in ipairs(TabPage:GetChildren()) do
 			if TemplateElement.ClassName == "Frame" and TemplateElement.Name ~= "Placeholder" then
@@ -3258,9 +3265,10 @@ function RayfieldLibrary:CreateWindow(Settings)
 		end
 
 		Rayfield.Main:GetPropertyChangedSignal('BackgroundColor3'):Connect(function()
+			local pageHolder = TabButton:FindFirstChild("PageHolder")
 			TabButton.UIStroke.Color = SelectedTheme.TabStroke
 			
-			if Elements.UIPageLayout.CurrentPage == TabPage then
+			if pageHolder and Elements.UIPageLayout.CurrentPage == pageHolder.Value then
 				TabButton.BackgroundColor3 = SelectedTheme.TabBackgroundSelected
 				TabButton.Image.ImageColor3 = SelectedTheme.SelectedTabTextColor
 				TabButton.Title.TextColor3 = SelectedTheme.SelectedTabTextColor
