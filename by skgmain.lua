@@ -1,3 +1,5 @@
+print("[Rayfield Debug Build] Library loading...")
+
 --[[
 
 Rayfield Interface Suite
@@ -44,9 +46,9 @@ local RayfieldLibrary = {
 
 			ElementBackground = Color3.fromRGB(35, 35, 35),
 			ElementBackgroundHover = Color3.fromRGB(40, 40, 40),
-			SecondaryElementBackground = Color3.fromRGB(25, 25, 25), -- For labels and paragraphs
+			SecondaryElementBackground = Color3.fromRGB(25, 25, 25),
 			ElementStroke = Color3.fromRGB(50, 50, 50),
-			SecondaryElementStroke = Color3.fromRGB(40, 40, 40), -- For labels and paragraphs
+			SecondaryElementStroke = Color3.fromRGB(40, 40, 40),
 
 			SliderBackground = Color3.fromRGB(50, 138, 220),
 			SliderProgress = Color3.fromRGB(50, 138, 220),
@@ -69,51 +71,49 @@ local RayfieldLibrary = {
 		},
 
         Custom = {
-			TextColor = Color3.fromRGB(200, 200, 255), -- Light text for readability on dark background
+			TextColor = Color3.fromRGB(200, 200, 255),
 
-			Background = Color3.fromRGB(61, 52, 144), -- Deep background to match the dark blue-purple tone
-			Topbar = Color3.fromRGB(58, 55, 154), -- Slightly lighter for the top bar
-			Shadow = Color3.fromRGB(25, 20, 70), -- Subtle shadow for depth
+			Background = Color3.fromRGB(61, 52, 144),
+			Topbar = Color3.fromRGB(58, 55, 154),
+			Shadow = Color3.fromRGB(25, 20, 70),
 
-			NotificationBackground = Color3.fromRGB(53, 45, 126), -- Primary color for notifications
-			NotificationActionsBackground = Color3.fromRGB(48, 40, 116), -- Slight contrast for actions
+			NotificationBackground = Color3.fromRGB(53, 45, 126),
+			NotificationActionsBackground = Color3.fromRGB(48, 40, 116),
 
-			TabBackground = Color3.fromRGB(40, 35, 100), -- Darker tab background to blend with the theme
-			TabStroke = Color3.fromRGB(60, 50, 140), -- Stroke to add separation
-			TabBackgroundSelected = Color3.fromRGB(53, 45, 126), -- Highlight for selected tab to match primary color
-			TabTextColor = Color3.fromRGB(180, 180, 240), -- Light text color for tab labels
-			SelectedTabTextColor = Color3.fromRGB(240, 240, 255), -- Bright color for selected tab text
+			TabBackground = Color3.fromRGB(40, 35, 100),
+			TabStroke = Color3.fromRGB(60, 50, 140),
+			TabBackgroundSelected = Color3.fromRGB(53, 45, 126),
+			TabTextColor = Color3.fromRGB(180, 180, 240),
+			SelectedTabTextColor = Color3.fromRGB(240, 240, 255),
 
-			ElementBackground = Color3.fromRGB(53, 45, 126), -- Main element background color
-			ElementBackgroundHover = Color3.fromRGB(45, 38, 110), -- Darker shade on hover instead of black
-			SecondaryElementBackground = Color3.fromRGB(50, 42, 120), -- Unified look for labels/paragraphs
-			ElementStroke = Color3.fromRGB(70, 60, 160), -- Element stroke for borders
+			ElementBackground = Color3.fromRGB(53, 45, 126),
+			ElementBackgroundHover = Color3.fromRGB(45, 38, 110),
+			SecondaryElementBackground = Color3.fromRGB(50, 42, 120),
+			ElementStroke = Color3.fromRGB(70, 60, 160),
 			SecondaryElementStroke = Color3.fromRGB(70, 60, 160),
 
-			SliderBackground = Color3.fromRGB(100, 90, 170), -- Slider background to blend with theme
-			SliderProgress = Color3.fromRGB(120, 110, 190), -- Progress color for contrast
-			SliderStroke = Color3.fromRGB(90, 80, 160), -- Stroke to match the slider colors
+			SliderBackground = Color3.fromRGB(100, 90, 170),
+			SliderProgress = Color3.fromRGB(120, 110, 190),
+			SliderStroke = Color3.fromRGB(90, 80, 160),
 
-			ToggleBackground = Color3.fromRGB(53, 45, 126), -- Toggle background in primary color
+			ToggleBackground = Color3.fromRGB(53, 45, 126),
 			ToggleEnabled = Color3.fromRGB(100, 93, 181),
-			ToggleDisabled = Color3.fromRGB(80, 73, 161), -- Muted for disabled toggle
-			ToggleEnabledStroke = Color3.fromRGB(107, 100, 206), -- Lighter stroke for enabled toggle
-			ToggleDisabledStroke = Color3.fromRGB(97, 90, 196), -- Subtle stroke for disabled
+			ToggleDisabled = Color3.fromRGB(80, 73, 161),
+			ToggleEnabledStroke = Color3.fromRGB(107, 100, 206),
+			ToggleDisabledStroke = Color3.fromRGB(97, 90, 196),
 			ToggleEnabledOuterStroke = Color3.fromRGB(123, 106, 246),
 			ToggleDisabledOuterStroke = Color3.fromRGB(93, 76, 216),
 
-			DropdownSelected = Color3.fromRGB(53, 45, 126), -- Main color for dropdown selection
-			DropdownUnselected = Color3.fromRGB(45, 40, 100), -- Slightly darker for unselected state
+			DropdownSelected = Color3.fromRGB(53, 45, 126),
+			DropdownUnselected = Color3.fromRGB(45, 40, 100),
 
-			InputBackground = Color3.fromRGB(53, 45, 126), -- Input background in primary color
-			InputStroke = Color3.fromRGB(80, 70, 150), -- Input border for distinction
-			PlaceholderColor = Color3.fromRGB(150, 140, 200) -- Subtle lighter color for placeholders
+			InputBackground = Color3.fromRGB(53, 45, 126),
+			InputStroke = Color3.fromRGB(80, 70, 150),
+			PlaceholderColor = Color3.fromRGB(150, 140, 200)
 		},
 	}
 }
 
-
--- Services
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local HttpService = game:GetService("HttpService")
@@ -121,10 +121,7 @@ local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
 local CoreGui = game:GetService("CoreGui")
 
--- Interface Management
 local Rayfield = game:GetObjects("rbxassetid://134415566685128")[1]
-
----------------------------------------------------------------------------------------------------------------------------------------- IMPORTANT
 
 local MessagingSystem = Instance.new("ScreenGui")
 MessagingSystem.Name = "MESSAGINGSYSTEM"
@@ -139,12 +136,8 @@ if OriginalNotifications then
     VisibleNotifications.Parent = MessagingSystem
 end
 
-----------------------------------------------------------------------------------------------------------------------------------------
-
 Rayfield.Parent = CoreGui
 Rayfield.Enabled = false
-
--- Variables
 
 local request = (syn and syn.request) or (http and http.request) or http_request
 local CFileName = nil
@@ -212,8 +205,6 @@ end
 local dragOffset = 255
 local dragOffsetMobile = 150
 
--- Object Variables
-
 local Camera = workspace.CurrentCamera
 local Main = Rayfield:FindFirstChild("Main")
 if Main == nil then
@@ -265,7 +256,7 @@ local function ChangeTheme(ThemeName)
 
 end
 
-local notificationSent = false  -- Flag
+local notificationSent = false
 
 local function LoadConfiguration(Configuration)
 	local Data = HttpService:JSONDecode(Configuration)
@@ -306,23 +297,18 @@ local function LoadConfiguration(Configuration)
 	end
 end
 
-function RayfieldLibrary:Notify(data) -- action e.g open messages
+function RayfieldLibrary:Notify(data)
 	task.spawn(function()
 		if not VisibleNotifications then return end
-		print("start notif")
-		-- Notification Object Creation
 		local newNotification = VisibleNotifications:WaitForChild("Template"):Clone()
 		newNotification.Name = data.Title or 'No Title Provided'
 		newNotification.Parent = VisibleNotifications
 		newNotification.LayoutOrder = #VisibleNotifications:GetChildren()
 		newNotification.Visible = false
 
-		-- Set Data
 		newNotification.Title.Text = data.Title or "Unknown Title"
 		newNotification.Description.Text = data.Content or "Unknown Content"
 		newNotification.Icon.Image = "rbxassetid://" .. (data.Image or 0)
-
-		-- Set initial transparency values
 		
 		newNotification.Title.TextColor3 = SelectedTheme.TextColor
 		newNotification.Description.TextColor3 = SelectedTheme.TextColor
@@ -341,7 +327,6 @@ function RayfieldLibrary:Notify(data) -- action e.g open messages
 
 		task.wait()
 
-		-- Calculate textbounds and set initial values
 		local bounds = {newNotification.Title.TextBounds.Y, newNotification.Description.TextBounds.Y}
 		newNotification.Size = UDim2.new(1, -60, 0, -VisibleNotifications:FindFirstChild("UIListLayout").Padding.Offset)
 
@@ -388,7 +373,7 @@ end
 
 local function openSearch()
 	searchOpen = true
-		print("start search")
+
 	Main.Search.BackgroundTransparency = 1
 	Main.Search.Shadow.ImageTransparency = 1
 	Main.Search.Input.TextTransparency = 1
@@ -430,9 +415,10 @@ local function closeSearch()
 	TweenService:Create(Main.Search.Input, TweenInfo.new(0.15, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
 
 	for _, tabbtn in ipairs(TabList:GetChildren()) do
-		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "Placeholder" then
+		local pageHolder = tabbtn:FindFirstChild("PageHolder")
+		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "Placeholder" and pageHolder and pageHolder.Value then
 			tabbtn.Interact.Visible = true
-			if tostring(Elements.UIPageLayout.CurrentPage) == tabbtn.Title.Text then
+			if Elements.UIPageLayout.CurrentPage == pageHolder.Value then
 				TweenService:Create(tabbtn, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Image, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
@@ -452,7 +438,7 @@ end
 
 local function Hide(notify: boolean?)
 	task.spawn(closeSearch)
-		print("hide")
+
 	Debounce = true
 	if notify then
 		if useMobileSizing then
@@ -556,8 +542,9 @@ local function Maximise()
 	task.wait(0.1)
 
 	for _, tabbtn in ipairs(TabList:GetChildren()) do
-		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "Placeholder" then
-			if tostring(Elements.UIPageLayout.CurrentPage) == tabbtn.Title.Text then
+		local pageHolder = tabbtn:FindFirstChild("PageHolder")
+		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "Placeholder" and pageHolder and pageHolder.Value then
+			if Elements.UIPageLayout.CurrentPage == pageHolder.Value then
 				TweenService:Create(tabbtn, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Image, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
@@ -568,7 +555,6 @@ local function Maximise()
 				TweenService:Create(tabbtn.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0.2}):Play()
 				TweenService:Create(tabbtn.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
 			end
-
 		end
 	end
 
@@ -578,7 +564,6 @@ local function Maximise()
 end
 
 local function Unhide()
-			print("unhide")
 	Debounce = true
 	Main.Position = UDim2.new(0.5, 0, 0.5, 0)
 	Main.Visible = true
@@ -605,8 +590,9 @@ local function Unhide()
 	dragBar.Position = useMobileSizing and UDim2.new(0.5, 0, 0.5, dragOffsetMobile) or UDim2.new(0.5, 0, 0.5, dragOffset)
 
 	for _, tabbtn in ipairs(TabList:GetChildren()) do
-		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "Placeholder" then
-			if tostring(Elements.UIPageLayout.CurrentPage) == tabbtn.Title.Text then
+		local pageHolder = tabbtn:FindFirstChild("PageHolder")
+		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "Placeholder" and pageHolder and pageHolder.Value then
+			if Elements.UIPageLayout.CurrentPage == pageHolder.Value then
 				TweenService:Create(tabbtn, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Image, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 0}):Play()
@@ -704,7 +690,7 @@ local function Minimise()
 end
 
 function RayfieldLibrary:CreateWindow(Settings)
-			print("created window")
+	print("[Rayfield Debug] ==> CreateWindow called.")
 	if Main:FindFirstChild("UIGradient") ~= nil then
 		Main.UIGradient.Rotation = 0
 		Main.UIGradient.Offset = Vector2.new(-1, Main.UIGradient.Offset.Y)
@@ -751,13 +737,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 		end)
 	end
 	
-	--[[
-	local Release = "Custom Build"
-	local RayfieldFolder = "EXPENSIVEUI"
-	local ConfigurationFolder = RayfieldFolder.."/Configurations"
-	local ConfigurationExtension = ".txt"
-	]]
-
 	pcall(function()
 		if not Settings.ConfigurationSaving.FileName then
 			Settings.ConfigurationSaving.FileName = tostring(game.PlaceId)
@@ -890,7 +869,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 				})
 			end
 
-			if Settings.Discord.RememberJoins then -- We do logic this way so if the developer changes this setting, the user still won't be prompted, only new users
+			if Settings.Discord.RememberJoins then
 				writefile(RayfieldFolder.."/Discord Invites".."/"..Settings.Discord.Invite..ConfigurationExtension,"Rayfield RememberJoins is true for this invite, this invite will not ask you to join again")
 			end
 		end
@@ -1106,18 +1085,20 @@ function RayfieldLibrary:CreateWindow(Settings)
 	Elements.UIPageLayout.FillDirection = Enum.FillDirection.Horizontal
 	TabList.Template.Visible = false
 
-	-- Tab
 	local FirstTab = false
 	local Window = {}
 	function Window:CreateTab(Name,Image)
-					print("created tab")
+		print(string.format("[Rayfield Debug] ----> CreateTab called. Name: '%s', Image: '%s'", Name, tostring(Image)))
+		local CleanName = Name:gsub("<[^>]+>", "")
+		print("[Rayfield Debug] --------> Generated CleanName: " .. CleanName)
 		local SDone = false
 		local TabButton = TabList.Template:Clone()
-		TabButton.Name = Name
+		TabButton.Name = CleanName
 		TabButton.Title.Text = Name
 		TabButton.Parent = TabList
 		TabButton.Title.TextWrapped = false
 		TabButton.Size = UDim2.new(0, TabButton.Title.TextBounds.X + 30, 0, 30)
+		print("[Rayfield Debug] --------> TabButton created: " .. tostring(TabButton))
 
 		if Image then
 			TabButton.Title.AnchorPoint = Vector2.new(0, 0.5)
@@ -1132,15 +1113,19 @@ function RayfieldLibrary:CreateWindow(Settings)
 		TabButton.Title.TextTransparency = 1
 		TabButton.Image.ImageTransparency = 1
 		TabButton.UIStroke.Transparency = 1
-
 		TabButton.Visible = true
 
-		-- Create Elements Page
 		local TabPage = Elements.Template:Clone()
-		TabPage.Name = Name
+		TabPage.Name = CleanName
 		TabPage.Visible = true
-
 		TabPage.LayoutOrder = #Elements:GetChildren()
+		print(string.format("[Rayfield Debug] --------> TabPage created: %s (Parent: %s)", tostring(TabPage), tostring(TabPage.Parent)))
+		
+		local pageHolder = Instance.new("ObjectValue")
+		pageHolder.Name = "PageHolder"
+		pageHolder.Value = TabPage
+		pageHolder.Parent = TabButton
+		print("[Rayfield Debug] --------> PageHolder ObjectValue created and parented to TabButton. Value:", tostring(pageHolder.Value))
 
 		for _, TemplateElement in ipairs(TabPage:GetChildren()) do
 			if TemplateElement.ClassName == "Frame" and TemplateElement.Name ~= "Placeholder" then
@@ -1149,16 +1134,19 @@ function RayfieldLibrary:CreateWindow(Settings)
 		end
 
 		TabPage.Parent = Elements
+		print("[Rayfield Debug] --------> TabPage parent set to: " .. tostring(TabPage.Parent))
+
 		if not FirstTab then
+			print("[Rayfield Debug] --------> This is the first tab. Jumping UIPageLayout to it.")
 			Elements.UIPageLayout.Animated = false
 			Elements.UIPageLayout:JumpTo(TabPage)
 			Elements.UIPageLayout.Animated = true
+			print("[Rayfield Debug] --------> Current UIPageLayout page is now:", tostring(Elements.UIPageLayout.CurrentPage))
 		end
-
 		
-		-- Animate
 		task.wait(0.1)
 		if FirstTab then
+			print("[Rayfield Debug] --------> Animating as a subsequent tab.")
 			TabButton.BackgroundColor3 = SelectedTheme.TabBackground
 			TabButton.Image.ImageColor3 = SelectedTheme.TabTextColor
 			TabButton.Title.TextColor3 = SelectedTheme.TabTextColor
@@ -1167,7 +1155,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 			TweenService:Create(TabButton.Image, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {ImageTransparency = 0.2}):Play()
 			TweenService:Create(TabButton.UIStroke, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {Transparency = 0.5}):Play()
 		else
-			FirstTab = Name
+			print("[Rayfield Debug] --------> Animating as the first tab.")
+			FirstTab = true
 			TabButton.BackgroundColor3 = SelectedTheme.TabBackgroundSelected
 			TabButton.Image.ImageColor3 = SelectedTheme.SelectedTabTextColor
 			TabButton.Title.TextColor3 = SelectedTheme.SelectedTabTextColor
@@ -1175,7 +1164,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 			TweenService:Create(TabButton, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
 			TweenService:Create(TabButton.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 		end
-
 
 		TabButton.Interact.MouseButton1Click:Connect(function()
 			if Minimised then return end
@@ -1206,24 +1194,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 		local Tab = {}
 
-		--[[
-		local Button = Tab:CreateButton({
-			Name = "Button Example",
-			TitleGlow = true,
-			TitleGlowSettings = {
-				Color = Color3.fromRGB(200, 200, 200),
-				Thickness = 2,
-				Transparency = 0.5,
-				-- and other properties here if needed
-			},
-			Callback = function()
-			-- The function that takes place when the button is pressed
-			end,
-		})
-		]]
-
-		-- Button
 		function Tab:CreateButton(ButtonSettings)
+			print(string.format("[Rayfield Debug] ----> CreateButton called. Name: '%s'", ButtonSettings.Name))
 			local ButtonValue = {}
 
 			local Button = Elements.Template.Button:Clone()
@@ -1231,6 +1203,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			Button.Title.Text = ButtonSettings.Name
 			Button.Visible = true
 			Button.Parent = TabPage
+			print("[Rayfield Debug] --------> Button cloned and parented to:", tostring(Button.Parent))
 
 			if ButtonSettings.TitleGlow and ButtonSettings.TitleGlowSettings then
 				local stroke = Instance.new("UIStroke")
@@ -1291,12 +1264,12 @@ function RayfieldLibrary:CreateWindow(Settings)
 				Button.Title.Text = NewButton
 				Button.Name = NewButton
 			end
-
+			print("[Rayfield Debug] <---- CreateButton finished.")
 			return ButtonValue
 		end
 
-		-- ColorPicker
-		function Tab:CreateColorPicker(ColorPickerSettings) -- by Throit
+		function Tab:CreateColorPicker(ColorPickerSettings)
+			print(string.format("[Rayfield Debug] ----> CreateColorPicker called. Name: '%s'", ColorPickerSettings.Name))
 			ColorPickerSettings.Type = "ColorPicker"
 			local ColorPicker = Elements.Template.ColorPicker:Clone()
 			local Background = ColorPicker.CPBackground
@@ -1308,6 +1281,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 			ColorPicker.Title.Text = ColorPickerSettings.Name
 			ColorPicker.Visible = true
 			ColorPicker.Parent = TabPage
+			print("[Rayfield Debug] --------> ColorPicker cloned and parented to:", tostring(ColorPicker.Parent))
+
 			ColorPicker.Size = UDim2.new(1, -10, 0, 45)
 			Background.Size = UDim2.new(0, 39, 0, 22)
 			Display.BackgroundTransparency = 0
@@ -1409,12 +1384,10 @@ function RayfieldLibrary:CreateWindow(Settings)
 			local hex = string.format("#%02X%02X%02X",color.R*0xFF,color.G*0xFF,color.B*0xFF)
 			ColorPicker.HexInput.InputBox.Text = hex
 			local function setDisplay()
-				--Main
 				Main.MainPoint.Position = UDim2.new(s,-Main.MainPoint.AbsoluteSize.X/2,1-v,-Main.MainPoint.AbsoluteSize.Y/2)
 				Main.MainPoint.ImageColor3 = Color3.fromHSV(h,s,v)
 				Background.BackgroundColor3 = Color3.fromHSV(h,1,1)
 				Display.BackgroundColor3 = Color3.fromHSV(h,s,v)
-				--Slider 
 				local x = h * Slider.AbsoluteSize.X
 				Slider.SliderPoint.Position = UDim2.new(0,x-Slider.SliderPoint.AbsoluteSize.X/2,0.5,0)
 				Slider.SliderPoint.ImageColor3 = Color3.fromHSV(h,1,1)
@@ -1444,7 +1417,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 				ColorPickerSettings.Color = Color3.fromRGB(r,g,b)
 				SaveConfiguration()
 			end)
-			--RGB
 			local function rgbBoxes(box,toChange)
 				local value = tonumber(box.Text) 
 				local color = Color3.fromHSV(h,s,v) 
@@ -1548,83 +1520,48 @@ function RayfieldLibrary:CreateWindow(Settings)
 				ColorPicker.HexInput.BackgroundColor3 = SelectedTheme.InputBackground
 				ColorPicker.HexInput.UIStroke.Color = SelectedTheme.InputStroke
 			end)
-
+			print("[Rayfield Debug] <---- CreateColorPicker finished.")
 			return ColorPickerSettings
 		end
 
-		-- Section
 		function Tab:CreateSection(SectionName)
-			print("[DEBUG] Starting CreateSection with name:", SectionName)
-
+			print(string.format("[Rayfield Debug] ----> CreateSection called. Name: '%s'", SectionName))
 			local SectionValue = {}
 
-			-- Проверка SDone и создание пространства между секциями
 			if SDone then
-				print("[DEBUG] SDone is true, cloning SectionSpacing")
 				local SectionSpace = Elements.Template.SectionSpacing:Clone()
 				SectionSpace.Visible = true
 				SectionSpace.Parent = TabPage
-				print("[DEBUG] SectionSpacing cloned and parented to TabPage")
-			else
-				print("[DEBUG] SDone is false, no spacing added")
 			end
 
-			-- Клонирование и настройка заголовка секции
-			print("[DEBUG] Cloning SectionTitle")
 			local Section = Elements.Template.SectionTitle:Clone()
 			Section.Title.Text = SectionName
 			Section.Visible = true
 			Section.Parent = TabPage
-			print("[DEBUG] SectionTitle cloned, text set to:", SectionName, "and parented to TabPage")
+			print("[Rayfield Debug] --------> Section cloned and parented to:", tostring(Section.Parent))
 
-			-- Анимация прозрачности текста
 			Section.Title.TextTransparency = 1
-			print("[DEBUG] Starting tween for TextTransparency")
-			local tween = TweenService:Create(
-				Section.Title,
-				TweenInfo.new(0.7, Enum.EasingStyle.Exponential),
-				{TextTransparency = 0}
-			)
-			tween:Play()
-			print("[DEBUG] Tween started")
+			TweenService:Create(Section.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 
-			-- Метод для изменения текста секции
 			function SectionValue:Set(NewSection)
-				print("[DEBUG] SectionValue:Set called with:", NewSection)
 				Section.Title.Text = NewSection
-				print("[DEBUG] Section text updated to:", Section.Title.Text)
 			end
 
 			SDone = true
-			print("[DEBUG] SDone set to true, section creation finished")
-
+			print("[Rayfield Debug] <---- CreateSection finished.")
 			return SectionValue
 		end
 
-
-		--[[
-			local Label = Tab:CreateLabel({
-				Text = "ddd",
-				TitleGlow = true,
-				TitleGlowSettings = {
-					Color = Color3.fromRGB(200, 200, 200),
-					Thickness = 2,
-					Transparency = 0.5,
-					-- and other properties here if needed
-				},
-			})
-		]]
-
-		-- Label
 		function Tab:CreateLabel(LabelSettings)
+			print(string.format("[Rayfield Debug] ----> CreateLabel called. Text: '%s'", LabelSettings.Text))
 			local LabelValue = {}
 
 			local Label = Elements.Template.Label:Clone()
 			Label.Title.Text = LabelSettings.Text
 			Label.Visible = true
 			Label.Parent = TabPage
+			print("[Rayfield Debug] --------> Label cloned and parented to:", tostring(Label.Parent))
 			
-
 			Label.BackgroundColor3 = SelectedTheme.SecondaryElementBackground
 			Label.UIStroke.Color = SelectedTheme.SecondaryElementStroke
 
@@ -1655,26 +1592,12 @@ function RayfieldLibrary:CreateWindow(Settings)
 				Label.BackgroundColor3 = SelectedTheme.SecondaryElementBackground
 				Label.UIStroke.Color = SelectedTheme.SecondaryElementStroke
 			end)
-
+			print("[Rayfield Debug] <---- CreateLabel finished.")
 			return LabelValue
 		end
 
-		--[[
-		local Paragraph = Tab:CreateParagraph({
-			Title = "Paragraph Example",
-			Content = "Paragraph Example",
-			TitleGlow = true,
-			TitleGlowSettings = {
-				Color = Color3.fromRGB(200, 200, 200),
-				Thickness = 2,
-				Transparency = 0.5,
-				-- and other properties here if needed
-			},
-		})
-		]]
-
-		-- Paragraph
 		function Tab:CreateParagraph(ParagraphSettings)
+			print(string.format("[Rayfield Debug] ----> CreateParagraph called. Title: '%s'", ParagraphSettings.Title))
 			local ParagraphValue = {}
 
 			local Paragraph = Elements.Template.Paragraph:Clone()
@@ -1682,6 +1605,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			Paragraph.Content.Text = ParagraphSettings.Content
 			Paragraph.Visible = true
 			Paragraph.Parent = TabPage
+			print("[Rayfield Debug] --------> Paragraph cloned and parented to:", tostring(Paragraph.Parent))
 
 			if ParagraphSettings.TitleGlow and ParagraphSettings.TitleGlowSettings then
 				local stroke = Instance.new("UIStroke")
@@ -1716,27 +1640,12 @@ function RayfieldLibrary:CreateWindow(Settings)
 				Paragraph.Title.Text = NewParagraphSettings.Title
 				Paragraph.Content.Text = NewParagraphSettings.Content
 			end
-
+			print("[Rayfield Debug] <---- CreateParagraph finished.")
 			return ParagraphValue
 		end
 
-		--[[
-			local ImageParagraph = Tab:CreateImageParagraph({
-				Title = "g",
-				Content = "gg",
-				Image = "95315301252544",
-				TitleGlow = true,
-				TitleGlowSettings = {
-					Color = Color3.fromRGB(200, 200, 200),
-					Thickness = 2,
-					Transparency = 0.5,
-					-- and other properties here if needed
-				},
-			})
-		]]
-
-		-- Image Paragraph
 		function Tab:CreateImageParagraph(ImageParagraphSettings)
+			print(string.format("[Rayfield Debug] ----> CreateImageParagraph called. Title: '%s'", ImageParagraphSettings.Title))
 			local ImageParagraphValue = {}
 
 			local ImageParagraph = Elements.Template.ImageParagraph:Clone()
@@ -1745,6 +1654,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			ImageParagraph.Image.Image = "rbxassetid://" .. tostring(ImageParagraphSettings.Image)
 			ImageParagraph.Visible = true
 			ImageParagraph.Parent = TabPage
+			print("[Rayfield Debug] --------> ImageParagraph cloned and parented to:", tostring(ImageParagraph.Parent))
 
 			if ImageParagraphSettings.TitleGlow and ImageParagraphSettings.TitleGlowSettings then
 				local stroke = Instance.new("UIStroke")
@@ -1782,7 +1692,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 				ImageParagraph.BackgroundColor3 = SelectedTheme.SecondaryElementBackground
 				ImageParagraph.UIStroke.Color = SelectedTheme.SecondaryElementStroke
 			end)
-
+			print("[Rayfield Debug] <---- CreateImageParagraph finished.")
 			return ImageParagraphValue
 		end
 
@@ -1800,25 +1710,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 			end
 		end
 
-		--[[
-			local Stat = Tab:CreateStat({
-            	Title = "Cash",
-            	Icon = "6034973115",
-            	Value = game:GetService("Players").LocalPlayer.Value,
-            	PercentageIncreaseDecrease = true,
-            	Currency = "$",
-				TitleGlow = true,
-				TitleGlowSettings = {
-					Color = Color3.fromRGB(200, 200, 200),
-					Thickness = 2,
-					Transparency = 0.5,
-					-- and other properties here if needed
-				},
-        	})
-		]]
-
-		-- Stat
 		function Tab:CreateStat(StatSettings)
+			print(string.format("[Rayfield Debug] ----> CreateStat called. Title: '%s'", StatSettings.Title))
 			local StatValue = {}
 		
 			local Stat = Elements.Template.Stat:Clone()
@@ -1833,6 +1726,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			end
 			Stat.Visible = true
 			Stat.Parent = TabPage
+			print("[Rayfield Debug] --------> Stat cloned and parented to:", tostring(Stat.Parent))
 
 			if StatSettings.TitleGlow and StatSettings.TitleGlowSettings then
 				local stroke = Instance.new("UIStroke")
@@ -1890,38 +1784,18 @@ function RayfieldLibrary:CreateWindow(Settings)
 					end
 				end)     
 			end
-		
+			print("[Rayfield Debug] <---- CreateStat finished.")
 			return StatValue
 		end
 
-		--[[
-			local Input = Tab:CreateInput({
-   				Name = "Input Example",
-   				CurrentValue = "",
-   				PlaceholderText = "Input Placeholder",
-   				RemoveTextAfterFocusLost = false,
-   				Flag = "Input1",
-   				Callback = function(Text)
-   				-- The function that takes place when the input is changed
-   				-- The variable (Text) is a string for the value in the text box
-   				end,
-				TitleGlow = true,
-				TitleGlowSettings = {
-					Color = Color3.fromRGB(200, 200, 200),
-					Thickness = 2,
-					Transparency = 0.5,
-					-- and other properties here if needed
-				},
-			})
-		]]
-	
-		-- Input
 		function Tab:CreateInput(InputSettings)
+			print(string.format("[Rayfield Debug] ----> CreateInput called. Name: '%s'", InputSettings.Name))
 			local Input = Elements.Template.Input:Clone()
 			Input.Name = InputSettings.Name
 			Input.Title.Text = InputSettings.Name
 			Input.Visible = true
 			Input.Parent = TabPage
+			print("[Rayfield Debug] --------> Input cloned and parented to:", tostring(Input.Parent))
 
 			if InputSettings.TitleGlow and InputSettings.TitleGlowSettings then
 				local stroke = Instance.new("UIStroke")
@@ -2001,33 +1875,12 @@ function RayfieldLibrary:CreateWindow(Settings)
 				Input.InputFrame.BackgroundColor3 = SelectedTheme.InputBackground
 				Input.InputFrame.UIStroke.Color = SelectedTheme.InputStroke
 			end)
-
+			print("[Rayfield Debug] <---- CreateInput finished.")
 			return InputSettings
 		end
 
-		--[[
-			local Dropdown = Tab:CreateDropdown({
-   				Name = "Dropdown Example",
-   				Options = {"Option 1","Option 2"},
-   				CurrentOption = {"Option 1"},
-   				MultipleOptions = false,
-   				Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   				Callback = function(Options)
-   				-- The function that takes place when the selected option is changed
-   				-- The variable (Options) is a table of strings for the current selected options
-   				end,
-				TitleGlow = true,
-				TitleGlowSettings = {
-					Color = Color3.fromRGB(200, 200, 200),
-					Thickness = 2,
-					Transparency = 0.5,
-					-- and other properties here if needed
-				},
-			})
-		]]
-
-		-- Dropdown
 		function Tab:CreateDropdown(DropdownSettings)
+			print(string.format("[Rayfield Debug] ----> CreateDropdown called. Name: '%s'", DropdownSettings.Name))
 			local Dropdown = Elements.Template.Dropdown:Clone()
 			if string.find(DropdownSettings.Name,"closed") then
 				Dropdown.Name = "Dropdown"
@@ -2037,7 +1890,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 			Dropdown.Title.Text = DropdownSettings.Name
 			Dropdown.Visible = true
 			Dropdown.Parent = TabPage
-
+			print("[Rayfield Debug] --------> Dropdown cloned and parented to:", tostring(Dropdown.Parent))
+		
 			if DropdownSettings.TitleGlow and DropdownSettings.TitleGlowSettings then
 				local stroke = Instance.new("UIStroke")
 				stroke.Parent = Dropdown.Title
@@ -2319,7 +2173,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 				--SaveConfiguration()
 			end
 
-			function DropdownSettings:Refresh(optionsTable: table) -- updates a dropdown with new options from optionsTable
+			function DropdownSettings:Refresh(optionsTable: table)
 				DropdownSettings.Options = optionsTable
 				for _, option in Dropdown.List:GetChildren() do
 					if option.ClassName == "Frame" and option.Name ~= "Placeholder" then
@@ -2339,38 +2193,20 @@ function RayfieldLibrary:CreateWindow(Settings)
 				Dropdown.Toggle.ImageColor3 = SelectedTheme.TextColor
 				TweenService:Create(Dropdown, TweenInfo.new(0.4, Enum.EasingStyle.Exponential), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
 			end)
-
+			print("[Rayfield Debug] <---- CreateDropdown finished.")
 			return DropdownSettings
 		end
 
-		--[[
-			local Keybind = Tab:CreateKeybind({
-   				Name = "Keybind Example",
-   				CurrentKeybind = "Q",
-   				HoldToInteract = false,
-   				Flag = "Keybind1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   				Callback = function(Keybind)
-   				-- The function that takes place when the keybind is pressed
-   				-- The variable (Keybind) is a boolean for whether the keybind is being held or not (HoldToInteract needs to be true)
-   				end,
-				TitleGlow = true,
-				TitleGlowSettings = {
-					Color = Color3.fromRGB(200, 200, 200),
-					Thickness = 2,
-					Transparency = 0.5,
-					-- and other properties here if needed
-				},
-			})
-		]]
-
-		-- Keybind
 		function Tab:CreateKeybind(KeybindSettings)
+			print(string.format("[Rayfield Debug] ----> CreateKeybind called. Name: '%s'", KeybindSettings.Name))
 			local CheckingForKey = false
 			local Keybind = Elements.Template.Keybind:Clone()
 			Keybind.Name = KeybindSettings.Name
 			Keybind.Title.Text = KeybindSettings.Name
 			Keybind.Visible = true
 			Keybind.Parent = TabPage
+			print("[Rayfield Debug] --------> Keybind cloned and parented to:", tostring(Keybind.Parent))
+
 
 			if KeybindSettings.TitleGlow and KeybindSettings.TitleGlowSettings then
 				local stroke = Instance.new("UIStroke")
@@ -2428,7 +2264,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 						Keybind.KeybindFrame.KeybindBox:ReleaseFocus()
 						SaveConfiguration()
 					end
-				elseif KeybindSettings.CurrentKeybind ~= nil and (input.KeyCode == Enum.KeyCode[KeybindSettings.CurrentKeybind] and not processed) then -- Test
+				elseif KeybindSettings.CurrentKeybind ~= nil and (input.KeyCode == Enum.KeyCode[KeybindSettings.CurrentKeybind] and not processed) then
 					local Held = true
 					local Connection
 					Connection = input.Changed:Connect(function(prop)
@@ -2455,10 +2291,10 @@ function RayfieldLibrary:CreateWindow(Settings)
 						if Held then
 							local Loop; Loop = RunService.Stepped:Connect(function()
 								if not Held then
-									KeybindSettings.Callback(false) -- maybe pcall this
+									KeybindSettings.Callback(false)
 									Loop:Disconnect()
 								else
-									KeybindSettings.Callback(true) -- maybe pcall this
+									KeybindSettings.Callback(true)
 								end
 							end)
 						end
@@ -2486,31 +2322,12 @@ function RayfieldLibrary:CreateWindow(Settings)
 				Keybind.KeybindFrame.BackgroundColor3 = SelectedTheme.InputBackground
 				Keybind.KeybindFrame.UIStroke.Color = SelectedTheme.InputStroke
 			end)
-			
+			print("[Rayfield Debug] <---- CreateKeybind finished.")
 			return KeybindSettings
 		end
 
-		--[[
-			local Toggle = Tab:CreateToggle({
-   				Name = "Toggle Example",
-   				CurrentValue = false,
-   				Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   				Callback = function(Value)
-   				-- The function that takes place when the toggle is pressed
-   				-- The variable (Value) is a boolean on whether the toggle is true or false
-   				end,
-				TitleGlow = true,
-				TitleGlowSettings = {
-					Color = Color3.fromRGB(200, 200, 200),
-					Thickness = 2,
-					Transparency = 0.5,
-					-- and other properties here if needed
-				},
-			})
-		]]
-
-		-- Toggle
 		function Tab:CreateToggle(ToggleSettings)
+			print(string.format("[Rayfield Debug] ----> CreateToggle called. Name: '%s'", ToggleSettings.Name))
 			local ToggleValue = {}
 
 			local Toggle = Elements.Template.Toggle:Clone()
@@ -2518,6 +2335,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			Toggle.Title.Text = ToggleSettings.Name
 			Toggle.Visible = true
 			Toggle.Parent = TabPage
+			print("[Rayfield Debug] --------> Toggle cloned and parented to:", tostring(Toggle.Parent))
 
 			if ToggleSettings.TitleGlow and ToggleSettings.TitleGlowSettings then
 				local stroke = Instance.new("UIStroke")
@@ -2666,17 +2484,16 @@ function RayfieldLibrary:CreateWindow(Settings)
 					Toggle.Switch.UIStroke.Color = SelectedTheme.ToggleEnabledOuterStroke
 				end
 			end)
-
+			print("[Rayfield Debug] <---- CreateToggle finished.")
 			return ToggleSettings
 		end
 
-		-- ExternalParagraph
 		function Tab:CreateExternalParagraph(ExternalParagraphSettings)
+			print(string.format("[Rayfield Debug] ----> CreateExternalParagraph called. Title: '%s'", ExternalParagraphSettings.Title))
 			local ExternalParagraphValue = {}
-			local createdElements = {}  -- Table to store all created (cloned) elements
-			ExternalParagraphSettings.CreatedElements = {}  -- Mapping table for dynamic element references
+			local createdElements = {}
+			ExternalParagraphSettings.CreatedElements = {}
 		
-			-- Create the main external paragraph element
 			local ExternalParagraph = Elements.Template.ExternalParagraph:Clone()
 			ExternalParagraph.Name = ExternalParagraphSettings.Title .. "rr"
 			ExternalParagraph.Title.Text = ExternalParagraphSettings.Title
@@ -2732,13 +2549,11 @@ function RayfieldLibrary:CreateWindow(Settings)
 				TweenService:Create(ExternalParagraph.SwitchHolder, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
 			end)
 		
-			-- Create the external container (EP) for extra elements.
 			local EP = Rayfield.ExternalParagraphTemplate:Clone()
 			EP.Parent = Rayfield
 			EP.Name = ExternalParagraphSettings.ParagraphTitle .. "External"
 			EP.Topbar.Title.Text = ExternalParagraphSettings.ParagraphTitle
 		
-			-- Helper function to create a Label element
 			local function CreateLabel(LabelSettings)
 				local Label = EP.Elements.Template.Label:Clone()
 				Label.Title.Text = LabelSettings.Text
@@ -2770,7 +2585,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 				return Label
 			end
 		
-			-- Helper function to create a Paragraph element
 			local function CreateParagraph(ParagraphSettings)
 				local Paragraph = EP.Elements.Template.Paragraph:Clone()
 				Paragraph.Title.Text = ParagraphSettings.Title or "Paragraph"
@@ -2795,7 +2609,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 				return Paragraph
 			end
 		
-			-- Dynamically create elements from the provided settings
 			for key, elementSettings in pairs(ExternalParagraphSettings.Elements) do
 				if elementSettings.Type == "Label" then
 					local label = CreateLabel(elementSettings)
@@ -2808,17 +2621,14 @@ function RayfieldLibrary:CreateWindow(Settings)
 				end
 			end
 		
-			-- SwitchHolder interaction
 			ExternalParagraph.SwitchHolder.Interact.MouseButton1Click:Connect(function()
 				if ExternalParagraphSettings.CurrentValue then
 					ExternalParagraphSettings.CurrentValue = false
-					-- OFF branch
 					if EP then
 						local originalSize = EP:GetAttribute("OriginalSize") or EP.Size
 						local lineSize = UDim2.new(originalSize.X.Scale, originalSize.X.Offset, 0, 2)
 						local closeTween = TweenService:Create(EP, TweenInfo.new(0.4, Enum.EasingStyle.Exponential), {Size = lineSize, BackgroundTransparency = 1})
 		
-						-- Tween only the created elements
 						for _, v in ipairs(createdElements) do
 							if v:IsA("Frame") then
 								TweenService:Create(v, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundTransparency = 1}):Play()
@@ -2867,7 +2677,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 					TweenService:Create(ExternalParagraph.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {Transparency = 0}):Play()
 				else
 					ExternalParagraphSettings.CurrentValue = true
-					-- ON branch
 					if EP then
 						EP:SetAttribute("OriginalSize", EP.Size)
 		
@@ -3028,7 +2837,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 					local openTween = TweenService:Create(EP, TweenInfo.new(0.4, Enum.EasingStyle.Exponential), {Size = originalSize, BackgroundTransparency = 0})
 					openTween:Play()
 		
-					-- Fade in created elements
 					for _, v in ipairs(createdElements) do
 						if v:IsA("Frame") then
 							TweenService:Create(v, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
@@ -3114,19 +2922,19 @@ function RayfieldLibrary:CreateWindow(Settings)
 					end
 				end
 			end
-		
+			print("[Rayfield Debug] <---- CreateExternalParagraph finished.")
 			return ExternalParagraphValue
 		end	
 		
-
-		-- Slider
 		function Tab:CreateSlider(SliderSettings)
+			print(string.format("[Rayfield Debug] ----> CreateSlider called. Name: '%s'", SliderSettings.Name))
 			local SLDragging = false
 			local Slider = Elements.Template.Slider:Clone()
 			Slider.Name = SliderSettings.Name
 			Slider.Title.Text = SliderSettings.Name
 			Slider.Visible = true
 			Slider.Parent = TabPage
+			print("[Rayfield Debug] --------> Slider cloned and parented to:", tostring(Slider.Parent))
 
 			if SliderSettings.TitleGlow and SliderSettings.TitleGlowSettings then
 				local stroke = Instance.new("UIStroke")
@@ -3277,14 +3085,15 @@ function RayfieldLibrary:CreateWindow(Settings)
 				Slider.Main.Progress.UIStroke.Color = SelectedTheme.SliderStroke
 				Slider.Main.Progress.BackgroundColor3 = SelectedTheme.SliderProgress
 			end)
-			
+			print("[Rayfield Debug] <---- CreateSlider finished.")
 			return SliderSettings
 		end
 
 		Rayfield.Main:GetPropertyChangedSignal('BackgroundColor3'):Connect(function()
+			local pageHolder = TabButton:FindFirstChild("PageHolder")
 			TabButton.UIStroke.Color = SelectedTheme.TabStroke
 			
-			if Elements.UIPageLayout.CurrentPage == TabPage then
+			if pageHolder and pageHolder.Value and Elements.UIPageLayout.CurrentPage == pageHolder.Value then
 				TabButton.BackgroundColor3 = SelectedTheme.TabBackgroundSelected
 				TabButton.Image.ImageColor3 = SelectedTheme.SelectedTabTextColor
 				TabButton.Title.TextColor3 = SelectedTheme.SelectedTabTextColor
@@ -3294,7 +3103,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 				TabButton.Title.TextColor3 = SelectedTheme.TabTextColor
 			end
 		end)
-
+		print("[Rayfield Debug] <---- CreateTab finished. Returning Tab object.")
 		return Tab
 	end
 
@@ -3316,8 +3125,6 @@ function RayfieldLibrary:CreateWindow(Settings)
     	end
 	end
 	
-	--------------------------------------------------------------------------------------------------------------------------------------------------------
-	
 	task.spawn(function()
 		if Main:FindFirstChild("UIGradient") then
 			TweenService:Create(Main:FindFirstChild("UIGradient"), TweenInfo.new(1, Enum.EasingStyle.Exponential), {Offset = Vector2.new(0, Main:FindFirstChild("UIGradient").Offset.Y)}):Play()
@@ -3329,8 +3136,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 		end
 	end)	
 	
-	--------------------------------------------------------------------------------------------------------------------------------------------------------
-
 	task.wait(0.5)
 	
 	TweenService:Create(LoadingFrame.Title, TweenInfo.new(0.5, Enum.EasingStyle.Exponential), {TextTransparency = 1}):Play()
@@ -3381,7 +3186,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			RayfieldLibrary:Notify({Title = 'Theme Changed', Content = 'Successfully changed theme to '..NewTheme..'.'})
 		end
 	end
-
+	print("[Rayfield Debug] <== CreateWindow finished. Returning Window object.")
 	return Window
 end
 
@@ -3506,14 +3311,6 @@ end
 
 
 function RayfieldLibrary:LoadConfiguration()
-
-	--[[
-	local Release = "Custom Build"
-	local RayfieldFolder = "EXPENSIVEUI"
-	local ConfigurationFolder = RayfieldFolder.."/Configurations"
-	local ConfigurationExtension = ".txt"
-	]]
-
 	if CEnabled then
 		notificationSent = false
 		local configFile = ConfigurationFolder .. "/" .. CFileName .. ConfigurationExtension
@@ -3541,70 +3338,5 @@ function RayfieldLibrary:LoadConfiguration()
 		end
 	end
 end
-
+print("[Rayfield Debug Build] Library finished loading.")
 return RayfieldLibrary
-
---[[
-
-local Rayfield = loadstring(game:HttpGet('https://pastebin.com/raw/svfAgxc6'))()
-
-local Window = Rayfield:CreateWindow({
-   Name = "Rayfield Example Window",
-   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "Rayfield Interface Suite",
-   LoadingSubtitle = "by Sirius",
-   Theme = "Custom", -- Check https://docs.sirius.menu/rayfield/configuration/themes
-
-   DisableRayfieldPrompts = false,
-   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
-
-   ConfigurationSaving = {
-      Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
-   },
-
-   Discord = {
-      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
-   },
-
-   KeySystem = false, -- Set this to true to use our key system
-   KeySettings = {
-      Title = "Untitled",
-      Subtitle = "Key System",
-      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
-   }
-})
-
-local Tab = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
-
-local ExternalParagraph = Tab:CreateExternalParagraph({
-    Title = "ExternalParagraphExample",
-	ParagraphTitle = "ExternalParagraphExample 2",
-    CurrentValue = false,
-    Flag = "ExternalParagraph1",
-    TitleGlow = true,
-    TitleGlowSettings = {
-        Color = Color3.fromRGB(200, 200, 200),
-        Thickness = 2,
-        Transparency = 0.5,
-        -- and other properties here if needed
-    },
-    Elements = {
-        label = { Type = "Label", Text = "ddd" },
-        paragraph = { Type = "Paragraph", Title = "Title Example", Content = "Content Example" }
-    }
-})
-
-ExternalParagraph:Set({
-    label = { Text = "dddggghfghf" },
-    paragraph = { Title = "Titlsdfsde Examsdfple", Content = "Contsfdsnt Exasfsdfmple" }
-})
-
-]]
