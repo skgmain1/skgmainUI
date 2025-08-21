@@ -1553,32 +1553,54 @@ function RayfieldLibrary:CreateWindow(Settings)
 		end
 
 		-- Section
-		function Tab:CreateSection(SectionName)
-					print("created section")
-			local SectionValue = {}
+function Tab:CreateSection(SectionName)
+    print("[DEBUG] Starting CreateSection with name:", SectionName)
 
-			if SDone then
-				local SectionSpace = Elements.Template.SectionSpacing:Clone()
-				SectionSpace.Visible = true
-				SectionSpace.Parent = TabPage
-			end
+    local SectionValue = {}
 
-			local Section = Elements.Template.SectionTitle:Clone()
-			Section.Title.Text = SectionName
-			Section.Visible = true
-			Section.Parent = TabPage
+    -- Проверка SDone и создание пространства между секциями
+    if SDone then
+        print("[DEBUG] SDone is true, cloning SectionSpacing")
+        local SectionSpace = Elements.Template.SectionSpacing:Clone()
+        SectionSpace.Visible = true
+        SectionSpace.Parent = TabPage
+        print("[DEBUG] SectionSpacing cloned and parented to TabPage")
+    else
+        print("[DEBUG] SDone is false, no spacing added")
+    end
 
-			Section.Title.TextTransparency = 1
-			TweenService:Create(Section.Title, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
+    -- Клонирование и настройка заголовка секции
+    print("[DEBUG] Cloning SectionTitle")
+    local Section = Elements.Template.SectionTitle:Clone()
+    Section.Title.Text = SectionName
+    Section.Visible = true
+    Section.Parent = TabPage
+    print("[DEBUG] SectionTitle cloned, text set to:", SectionName, "and parented to TabPage")
 
-			function SectionValue:Set(NewSection)
-				Section.Title.Text = NewSection
-			end
+    -- Анимация прозрачности текста
+    Section.Title.TextTransparency = 1
+    print("[DEBUG] Starting tween for TextTransparency")
+    local tween = TweenService:Create(
+        Section.Title,
+        TweenInfo.new(0.7, Enum.EasingStyle.Exponential),
+        {TextTransparency = 0}
+    )
+    tween:Play()
+    print("[DEBUG] Tween started")
 
-			SDone = true
+    -- Метод для изменения текста секции
+    function SectionValue:Set(NewSection)
+        print("[DEBUG] SectionValue:Set called with:", NewSection)
+        Section.Title.Text = NewSection
+        print("[DEBUG] Section text updated to:", Section.Title.Text)
+    end
 
-			return SectionValue
-		end
+    SDone = true
+    print("[DEBUG] SDone set to true, section creation finished")
+
+    return SectionValue
+end
+
 
 		--[[
 			local Label = Tab:CreateLabel({
