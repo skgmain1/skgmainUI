@@ -431,7 +431,7 @@ local function closeSearch()
 	for _, tabbtn in ipairs(TabList:GetChildren()) do
 		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "Placeholder" then
 			tabbtn.Interact.Visible = true
-			if tostring(Elements.UIPageLayout.CurrentPage) == tabbtn.Title.Text then
+			if Elements.UIPageLayout.CurrentPage == tabbtn.Page then
 				TweenService:Create(tabbtn, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Image, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
@@ -556,7 +556,7 @@ local function Maximise()
 
 	for _, tabbtn in ipairs(TabList:GetChildren()) do
 		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "Placeholder" then
-			if tostring(Elements.UIPageLayout.CurrentPage) == tabbtn.Title.Text then
+			if Elements.UIPageLayout.CurrentPage == tabbtn.Page then
 				TweenService:Create(tabbtn, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Image, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
@@ -604,7 +604,7 @@ local function Unhide()
 
 	for _, tabbtn in ipairs(TabList:GetChildren()) do
 		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "Placeholder" then
-			if tostring(Elements.UIPageLayout.CurrentPage) == tabbtn.Title.Text then
+			if Elements.UIPageLayout.CurrentPage == tabbtn.Page then
 				TweenService:Create(tabbtn, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Title, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 				TweenService:Create(tabbtn.Image, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {ImageTransparency = 0}):Play()
@@ -1107,9 +1107,10 @@ function RayfieldLibrary:CreateWindow(Settings)
 	local FirstTab = false
 	local Window = {}
 	function Window:CreateTab(Name,Image)
+		local CleanName = Name:gsub("<[^>]+>", "")
 		local SDone = false
 		local TabButton = TabList.Template:Clone()
-		TabButton.Name = Name
+		TabButton.Name = CleanName
 		TabButton.Title.Text = Name
 		TabButton.Parent = TabList
 		TabButton.Title.TextWrapped = false
@@ -1133,10 +1134,11 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 		-- Create Elements Page
 		local TabPage = Elements.Template:Clone()
-		TabPage.Name = Name
+		TabPage.Name = CleanName
 		TabPage.Visible = true
 
 		TabPage.LayoutOrder = #Elements:GetChildren()
+		TabButton.Page = TabPage
 
 		for _, TemplateElement in ipairs(TabPage:GetChildren()) do
 			if TemplateElement.ClassName == "Frame" and TemplateElement.Name ~= "Placeholder" then
